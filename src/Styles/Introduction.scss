@@ -1,0 +1,34 @@
+.hero {
+  width: 100%;
+  background-color: white;
+}
+.heroContainer {
+  max-width: 1140px;
+  padding: 80px 20px 0 20px;
+  margin: 0 auto;
+}
+.heroContainer > h1 {
+  font-size: 3.75rem;
+  line-height: 1em;
+  margin-top: .4em;
+  margin-bottom: 24px;
+}
+.heroContainer > p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  max-width: 1040px;
+  line-height: 1.7em;
+  font-family: Metropolis,sans-serif;
+  padding-bottom: 80px;
+  color: #333333;
+
+}
+@media screen and (max-width: 800px)  {
+  .heroContainer > h1 {
+    font-size: 3rem;
+  }
+  .heroContainer > p{
+    font-size: 1.25rem;
+    padding-bottom: 50px;
+  }
+}

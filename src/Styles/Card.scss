@@ -1,0 +1,35 @@
+.card {
+  position: relative;
+  width: 40%;
+  padding: 40px 30px;
+  margin-bottom: 25px;
+  background-color: white;
+  transition-duration: 0.5s;
+  border-radius: 5px;
+  font-family: Metropolis,sans-serif;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15) !important;
+}
+.imgContainer {
+  align-self: flex-start;
+}
+.icon {
+  height: 60px;
+}
+.cardContent {
+  display: flex;
+  justify-content: space-between;
+}
+.cardText {
+  margin: 16px 0;
+}
+.cardTextContainer {
+  padding-left: 20px;
+}
+@media screen and (max-width: 800px)  {
+  .card {
+    width: 100%;
+  }
+}

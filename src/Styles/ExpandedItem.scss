@@ -1,0 +1,10 @@
+.expandedItem {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 900px){
+  .expandedItem {
+    color: #98afae;
+    font-size: 1.3rem;
+  }
+}
