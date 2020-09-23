@@ -27,7 +27,7 @@ const NavElement = (props) => {
   return (
     <>
     <div className="navElementContainer" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <li>
+      <li className={!lists.list[chosenList].length && "hoverableExpandedItem"}>
         <div>
           <span>{props.name}</span>
           {
