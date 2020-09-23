@@ -1,5 +1,6 @@
 import React from 'react';
 import './../Styles/Introduction.scss';
+
 const Introduction = () => {
   return(
     <div className='hero'>
