@@ -4,13 +4,17 @@ import Card from "./Card/Card";
 import './../Styles/CardList.scss';
 
 
-const CardsList = () => {
+const CardsList = (props) => {
 
   return(
     <div className='cardListContainer'>
-      <div className='cardList'>
-        {CardList.cards.map( card => <Card name={card.name} text={card.text} icon={card.icon} />)}
-      </div>
+      {
+        props.items.length
+          ? <div className='cardList'>
+            {props.items.map( item => <Card name={item.name} text={item.text} icon={item.icon} />)}
+            </div>
+          : <div className="noResults">No Results</div>
+      }
     </div>
   );
 };
