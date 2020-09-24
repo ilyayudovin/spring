@@ -1,44 +1,47 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import '../../../Styles/MobileNavElement.scss';
-import lists from './../../../ExpandedListItems';
-import MobileExpandedList from "./MobileExpandedList/MobileExpandedList";
-import { AnimateOnChange } from 'react-animation'
+import { AnimateOnChange } from 'react-animation';
 import Collapse from '@material-ui/core/Collapse';
+import lists from '../../../ExpandedListItems.json';
+import MobileExpandedList from './MobileExpandedList/MobileExpandedList';
 
 const MobileNavElement = (props) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   let chosenList;
-  for(let x in lists.list){
-    if(x === props.name){
-      chosenList = x;
+  Object.keys(lists.list).forEach((key) => {
+    if (key === props.name) {
+      chosenList = key;
     }
-  }
+  });
 
   const handleMouseClick = () => {
     setIsExpanded(!isExpanded);
   };
 
-  return(
+  return (
     <>
-      <div onClick={handleMouseClick} className='MobileNavElement'>
+      <div onClick={handleMouseClick} role="presentation" className="MobileNavElement">
         {props.name}
         {
-          !!lists.list[chosenList].length &&
+          !!lists.list[chosenList].length
+          && (
           <AnimateOnChange>
             {
               isExpanded
-                ? <div className='arrow arrowReverse' />
-                : <div className='arrow' />
+                ? <div className="arrow arrowReverse" />
+                : <div className="arrow" />
             }
-            </AnimateOnChange>
+          </AnimateOnChange>
+          )
         }
-        </div>
+      </div>
       {
-        !!lists.list[chosenList].length && <Collapse in={isExpanded}><MobileExpandedList list={lists.list[chosenList]} /></Collapse>
+        !!lists.list[chosenList].length
+        && (<Collapse in={isExpanded}><MobileExpandedList list={lists.list[chosenList]} /></Collapse>)
       }
     </>
-  )
+  );
 };
 
 export default MobileNavElement;

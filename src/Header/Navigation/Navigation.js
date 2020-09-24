@@ -1,42 +1,48 @@
-import React, {useState} from 'react';
-import NavElement from "./NavElement/NavElement";
-import { AnimateOnChange } from 'react-animation'
-import {Close, Menu} from "@material-ui/icons";
+import React from 'react';
+import { AnimateOnChange } from 'react-animation';
+import { Close, Menu } from '@material-ui/icons';
+import logo from '../OG-Spring.svg.png';
+import NavElement from './NavElement/NavElement';
 
-const Navigation = (props) => {
-
+const Navigation = ({ setState, state }) => {
   const names = ['Why Spring', 'Learn', 'Projects', 'Training', 'Support', 'Community'];
 
   const handleClick = () => {
-    props.setState(!props.state);
+    setState(!state);
   };
 
-  return(
-    <div className='navigation'>
-      <div className='container'>
-        <a>
-          <img alt='Spring' src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Spring_Framework_Logo_2018.svg/800px-Spring_Framework_Logo_2018.svg.png' />
-        </a>
+  return (
+    <div className="navigation">
+      <div className="container">
+        <div>
+          <img alt="Spring" src={logo} />
+        </div>
         <ul>
-          {names.map( name => <NavElement name={name} />)}
+          {names.map((name) => <NavElement name={name} />)}
         </ul>
 
-          <div className='burger-icon' onClick={handleClick}>
-            <AnimateOnChange
-              animationIn="fadeIn"
-              animationOut="fadeOut"
-            >
+        <div className="burger-icon" onClick={handleClick} role="presentation">
+          <AnimateOnChange
+            animationIn="fadeIn"
+            animationOut="fadeOut"
+          >
             {
-              props.state
-                ? <Close fontSize="large" style={{ color: 'white',position:'fixed',zIndex: '100', top: 10, right:20}} />
+              state
+                ? (
+                  <Close
+                    fontSize="large"
+                    style={{
+                      color: 'white', position: 'fixed', zIndex: '100', top: 10, right: 20,
+                    }}
+                  />
+                )
                 : <Menu fontSize="large" />
             }
-            </AnimateOnChange>
-          </div>
+          </AnimateOnChange>
+        </div>
       </div>
     </div>
   );
-
 };
 
 export default Navigation;
