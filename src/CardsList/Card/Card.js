@@ -1,15 +1,15 @@
 import React from 'react';
 import '../../Styles/Card.scss';
 
-const Card = (props) => (
+const Card = ({ name, icon, text }) => (
   <div className="card">
     <div className="cardContent">
       <div className="imgContainer">
-        <img alt="icon" className="icon" src={props.icon} />
+        <img alt="icon" className="icon" src={icon} />
       </div>
       <div className="cardTextContainer">
-        <h3>{props.name}</h3>
-        <p className="cardText">{props.text}</p>
+        <h3>{name}</h3>
+        <p className="cardText">{text}</p>
       </div>
     </div>
   </div>

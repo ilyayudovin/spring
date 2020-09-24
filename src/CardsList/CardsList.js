@@ -2,13 +2,13 @@ import React from 'react';
 import Card from './Card/Card';
 import '../Styles/CardList.scss';
 
-const CardsList = (props) => (
+const CardsList = ({ items }) => (
   <div className="cardListContainer">
     {
-        props.items.length
+        items.length
           ? (
             <div className="cardList">
-              {props.items.map((item) => <Card name={item.name} text={item.text} icon={item.icon} />)}
+              {items.map((item) => <Card name={item.name} text={item.text} icon={item.icon} />)}
             </div>
           )
           : <div className="noResults">No Results</div>
