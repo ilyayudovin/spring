@@ -20,15 +20,19 @@ const Navigation = (props) => {
         <ul>
           {names.map( name => <NavElement name={name} />)}
         </ul>
-        <AnimateOnChange durationOut={10}>
+
           <div className='burger-icon' onClick={handleClick}>
+            <AnimateOnChange
+              animationIn="fadeIn"
+              animationOut="fadeOut"
+            >
             {
               props.state
-                ? <Close fontSize="large" style={{ color: 'white',position:'fixed',zIndex: '100', right: 20, top: 10 }} />
+                ? <Close fontSize="large" style={{ color: 'white',position:'fixed',zIndex: '100', top: 10, right:20}} />
                 : <Menu fontSize="large" />
             }
+            </AnimateOnChange>
           </div>
-        </AnimateOnChange>
       </div>
     </div>
   );

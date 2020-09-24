@@ -4,7 +4,6 @@ import ExpandedList from "./ExpandedList/ExpandedList";
 import lists from './../../../ExpandedListItems';
 import { AnimateOnChange } from 'react-animation'
 
-
 const NavElement = (props) => {
 
   const [isExpanded, setIsExpanded] = useState(false);
