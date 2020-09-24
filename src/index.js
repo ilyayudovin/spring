@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import './App.scss';
+import './Styles/App.scss';
 import Header from './Header/Header';
 import Introduction from './Introduction/Introduction';
 import CardsList from './CardsList/CardsList';

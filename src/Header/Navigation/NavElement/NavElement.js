@@ -35,8 +35,8 @@ const NavElement = (props) => {
         </li>
         <AnimateOnChange>
           {
-        isExpanded && !!lists.list[chosenList].length && <ExpandedList list={lists.list[chosenList]} />
-      }
+            !!lists.list[chosenList].length && <ExpandedList list={lists.list[chosenList]} />
+          }
         </AnimateOnChange>
       </div>
     </>
