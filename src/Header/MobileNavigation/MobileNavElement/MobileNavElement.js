@@ -21,7 +21,7 @@ const MobileNavElement = (props) => {
 
   return (
     <>
-      <div onClick={handleMouseClick} role="presentation" className="MobileNavElement">
+      <div onClick={handleMouseClick} role="presentation" className="mobileNavElement">
         {props.name}
         {
           !!lists.list[chosenList].length

@@ -5,7 +5,7 @@ import '../../../../Styles/MobileExpandedList.scss';
 const MobileExpandedList = (props) => {
   const expandedMenu = props.list.map((item) => <ExpandedItem name={item} />);
   return (
-    <div className="MobileExpandedMenu">
+    <div className="mobileExpandedMenu">
       <ul>
         {expandedMenu}
       </ul>

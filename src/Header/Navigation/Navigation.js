@@ -21,7 +21,7 @@ const Navigation = ({ setState, state }) => {
           {names.map((name) => <NavElement name={name} />)}
         </ul>
 
-        <div className="burger-icon" onClick={handleClick} role="presentation">
+        <div className="burgerIcon" onClick={handleClick} role="presentation">
           <AnimateOnChange
             animationIn="fadeIn"
             animationOut="fadeOut"

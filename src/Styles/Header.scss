@@ -72,7 +72,7 @@ ul {
   padding: 3px;
   margin-left: 5px;
 }
-.burger-icon {
+.burgerIcon {
   display: none;
   z-index: 100;
   cursor: pointer;
@@ -83,7 +83,7 @@ ul {
   }
 }
 @media screen and (max-width: 900px)  {
-  .burger-icon {
+  .burgerIcon {
     display: block;
   }
   .container {
