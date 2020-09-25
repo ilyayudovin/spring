@@ -5,8 +5,8 @@ import './Search.scss';
 
 const Search = ({ setItems }) => {
   const handleChange = (e) => {
-    const str = e.currentTarget.value;
-    const items = CardList.cards.filter((item) => item.name.toLowerCase().includes(str.toLowerCase()));
+    const inputText = e.currentTarget.value;
+    const items = CardList.cards.filter((item) => item.name.toLowerCase().includes(inputText.toLowerCase()));
     setItems(items);
   };
 
