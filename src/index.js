@@ -6,16 +6,19 @@ import Introduction from './Introduction/Introduction';
 import CardsList from './CardsList/CardsList';
 import Search from './Search/Search';
 import CardList from './CardsInfo.json';
+import CardsContext from './CardsContext/CardsContext';
 
 const App = () => {
-  const [items, setItems] = useState(CardList.cards);
+  const [cards, setCards] = useState(CardList.cards);
 
   return (
     <>
       <Header />
       <Introduction />
-      <Search setItems={setItems} items={items} />
-      <CardsList items={items} />
+      <CardsContext.Provider value={ [cards, setCards] }>
+        <Search />
+        <CardsList />
+      </CardsContext.Provider>
     </>
   );
 };

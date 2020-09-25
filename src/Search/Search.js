@@ -1,20 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import TextField from '@material-ui/core/TextField';
 import CardList from '../CardsInfo.json';
+import CardsContext from '../CardsContext/CardsContext';
 import './Search.scss';
 
-const Search = ({ setItems }) => {
+const Search = () => {
+
+  const [cards, setCards] = useContext(CardsContext);
+
   const handleChange = (e) => {
     const inputText = e.currentTarget.value;
-    const items = CardList.cards.filter((item) => item.name.toLowerCase().includes(inputText.toLowerCase()));
-    setItems(items);
+    setCards(CardList.cards.filter((card) => card.name.toLowerCase().includes(inputText.toLowerCase())));
   };
 
   return (
     <div className="searchInput">
       <TextField
         onChange={handleChange}
-        placeholder="search"
+        placeholder="Search"
         style={{ width: '100%', maxWidth: 900 }}
       />
     </div>
