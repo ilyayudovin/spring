@@ -8,13 +8,6 @@ import MobileExpandedList from '../MobileExpandedList/MobileExpandedList';
 const MobileNavElement = ({ name }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  let chosenList;
-  Object.keys(lists.list).forEach((key) => {
-    if (key === name) {
-      chosenList = key;
-    }
-  });
-
   const handleMouseClick = () => {
     setIsExpanded(!isExpanded);
   };
@@ -24,7 +17,7 @@ const MobileNavElement = ({ name }) => {
       <div onClick={handleMouseClick} role="presentation" className="mobileNavElement">
         {name}
         {
-          !!lists.list[chosenList].length
+          !!lists.list[name].length
           && (
           <AnimateOnChange>
             <div className={`arrow ${isExpanded ? 'arrowReverse' : ''}`} />
@@ -33,8 +26,8 @@ const MobileNavElement = ({ name }) => {
         }
       </div>
       {
-        !!lists.list[chosenList].length
-        && (<Collapse in={isExpanded}><MobileExpandedList list={lists.list[chosenList]} /></Collapse>)
+        !!lists.list[name].length
+        && (<Collapse in={isExpanded}><MobileExpandedList list={lists.list[name]} /></Collapse>)
       }
     </>
   );

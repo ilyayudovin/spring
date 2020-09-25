@@ -7,13 +7,6 @@ import lists from '../ExpandedListItems.json';
 const NavElement = ({ name }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  let chosenList;
-  Object.keys(lists.list).forEach((key) => {
-    if (key === name) {
-      chosenList = key;
-    }
-  });
-
   const handleMouseEnter = () => {
     setIsExpanded(true);
   };
@@ -25,17 +18,17 @@ const NavElement = ({ name }) => {
   return (
     <>
       <div className="navElementContainer" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        <li className={!lists.list[chosenList].length && 'hoverableExpandedItem'}>
+        <li className={!lists.list[name].length && 'hoverableExpandedItem'}>
           <div>
             <span className="navElementName">{ name }</span>
             {
-            !!lists.list[chosenList].length && <div className="arrow" />
+            !!lists.list[name].length && <div className="arrow" />
           }
           </div>
         </li>
         <AnimateOnChange>
           {
-            isExpanded && !!lists.list[chosenList].length && <ExpandedList list={lists.list[chosenList]} />
+            isExpanded && !!lists.list[name].length && <ExpandedList list={lists.list[name]} />
           }
         </AnimateOnChange>
       </div>
