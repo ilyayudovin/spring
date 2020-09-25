@@ -1,13 +1,12 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import { AnimateOnChange } from 'react-animation';
 import { Close, Menu } from '@material-ui/icons';
 import logo from '../Header/OG-Spring.svg.png';
 import lists from '../ExpandedListItems.json';
 import NavElement from '../NavElement/NavElement';
-import HeaderContext from "../Contexts/HeaderContext";
+import HeaderContext from '../Contexts/HeaderContext';
 
 const Navigation = () => {
-
   const [showMobileNav, setShowMobileNav] = useContext(HeaderContext);
 
   const handleClick = () => {

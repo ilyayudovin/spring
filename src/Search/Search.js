@@ -5,7 +5,7 @@ import CardsContext from '../Contexts/CardsContext';
 import './Search.scss';
 
 const Search = () => {
-
+  // eslint-disable-next-line
   const [cards, setCards] = useContext(CardsContext);
 
   const handleChange = (e) => {

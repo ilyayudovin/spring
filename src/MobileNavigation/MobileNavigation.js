@@ -1,11 +1,11 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import './SideNav.scss';
 import lists from '../ExpandedListItems.json';
 import MobileNavElement from '../MobileNavElement/MobileNavElement';
-import HeaderContext from "../Contexts/HeaderContext";
+import HeaderContext from '../Contexts/HeaderContext';
 
 const MobileNavigation = () => {
-
+  // eslint-disable-next-line
   const [showMobileNav, setShowMobileNav] = useContext(HeaderContext);
 
   const navElements = Object.keys(lists.list).map((name) => <MobileNavElement name={name} />);
