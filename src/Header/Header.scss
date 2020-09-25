@@ -36,6 +36,13 @@ ul {
   height: 48px;
   max-width: 250px;
 }
+.closeIcon {
+  color: white;
+  position: fixed;
+  z-index: 100;
+  top: 10px;
+  right: 20px;
+}
 .navElementContainer {
   position: relative;
   padding-top: 15px;

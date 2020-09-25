@@ -34,9 +34,7 @@ const Navigation = () => {
                 ? (
                   <Close
                     fontSize="large"
-                    style={{
-                      color: 'white', position: 'fixed', zIndex: '100', top: 10, right: 20,
-                    }}
+                    className="closeIcon"
                   />
                 )
                 : <Menu fontSize="large" />

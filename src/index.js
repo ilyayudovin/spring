@@ -19,7 +19,7 @@ const App = () => {
         <Header />
       </HeaderContext.Provider>
       <Introduction />
-      <CardsContext.Provider value={ [cards, setCards] }>
+      <CardsContext.Provider value={[cards, setCards]}>
         <Search />
         <CardsList />
       </CardsContext.Provider>
