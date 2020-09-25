@@ -1,10 +1,10 @@
 import React from 'react';
 import './SideNav.scss';
+import lists from '../ExpandedListItems.json';
 import MobileNavElement from '../MobileNavElement/MobileNavElement';
 
 const MobileNavigation = ({ show }) => {
-  const arr = ['Why Spring', 'Learn', 'Projects', 'Training', 'Support', 'Community'];
-  const navElements = arr.map((el) => <MobileNavElement name={el} />);
+  const navElements = Object.keys(lists.list).map((name) => <MobileNavElement name={name} />);
 
   const classes = show ? 'sideNav showSideNav' : 'sideNav';
 
