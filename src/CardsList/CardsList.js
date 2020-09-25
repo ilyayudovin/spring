@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import Card from '../Card/Card';
 import './CardList.scss';
-import CardsContext from "../CardsContext/CardsContext";
+import CardsContext from "../Contexts/CardsContext";
 
 const CardsList = () => {
 

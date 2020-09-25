@@ -1,12 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './SideNav.scss';
 import lists from '../ExpandedListItems.json';
 import MobileNavElement from '../MobileNavElement/MobileNavElement';
+import HeaderContext from "../Contexts/HeaderContext";
 
-const MobileNavigation = ({ show }) => {
+const MobileNavigation = () => {
+
+  const [showMobileNav, setShowMobileNav] = useContext(HeaderContext);
+
   const navElements = Object.keys(lists.list).map((name) => <MobileNavElement name={name} />);
 
-  const classes = show ? 'sideNav showSideNav' : 'sideNav';
+  const classes = showMobileNav ? 'sideNav showSideNav' : 'sideNav';
 
   return (
     <div className={classes}>

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import TextField from '@material-ui/core/TextField';
 import CardList from '../CardsInfo.json';
-import CardsContext from '../CardsContext/CardsContext';
+import CardsContext from '../Contexts/CardsContext';
 import './Search.scss';
 
 const Search = () => {
