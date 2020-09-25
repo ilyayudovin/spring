@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../Styles/SideNav.scss';
-import MobileNavElement from './MobileNavElement/MobileNavElement';
+import './SideNav.scss';
+import MobileNavElement from '../MobileNavElement/MobileNavElement';
 
 const MobileNavigation = ({ show }) => {
   const arr = ['Why Spring', 'Learn', 'Projects', 'Training', 'Support', 'Community'];

@@ -1,8 +1,8 @@
 import React from 'react';
 import { AnimateOnChange } from 'react-animation';
 import { Close, Menu } from '@material-ui/icons';
-import logo from '../OG-Spring.svg.png';
-import NavElement from './NavElement/NavElement';
+import logo from '../Header/OG-Spring.svg.png';
+import NavElement from '../NavElement/NavElement';
 
 const Navigation = ({ setState, state }) => {
   const names = ['Why Spring', 'Learn', 'Projects', 'Training', 'Support', 'Community'];

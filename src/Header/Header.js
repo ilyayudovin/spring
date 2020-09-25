@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import '../Styles/Header.scss';
-import MobileNavigation from './MobileNavigation/MobileNavigation';
-import Navigation from './Navigation/Navigation';
+import './Header.scss';
+import MobileNavigation from '../MobileNavigation/MobileNavigation';
+import Navigation from '../Navigation/Navigation';
 
 const Header = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);

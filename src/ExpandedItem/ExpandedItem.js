@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../../../Styles/ExpandedItem.scss';
+import './ExpandedItem.scss';
 
 const ExpandedItem = ({ name }) => (
   <li className="expandedItem hoverableExpandedItem">{name}</li>

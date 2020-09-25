@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import '../../../Styles/Header.scss';
+import '../Header/Header.scss';
 import { AnimateOnChange } from 'react-animation';
-import ExpandedList from './ExpandedList/ExpandedList';
-import lists from '../../../ExpandedListItems.json';
+import ExpandedList from '../ExpandedList/ExpandedList';
+import lists from '../ExpandedListItems.json';
 
 const NavElement = ({ name }) => {
   const [isExpanded, setIsExpanded] = useState(false);

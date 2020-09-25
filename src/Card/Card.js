@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../Styles/Card.scss';
+import './Card.scss';
 
 const Card = ({ name, icon, text }) => (
   <div className="card">

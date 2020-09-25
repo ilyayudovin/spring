@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../../../Styles/EpxandedList.scss';
-import ExpandedItem from './ExpandedItem/ExpandedItem';
+import './EpxandedList.scss';
+import ExpandedItem from '../ExpandedItem/ExpandedItem';
 
 const ExpandedList = ({ list }) => {
   const expandedMenu = list.map((item) => <ExpandedItem name={item} />);

@@ -1,7 +1,7 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import CardList from '../CardsInfo.json';
-import '../Styles/Search.scss';
+import './Search.scss';
 
 const Search = ({ setItems }) => {
   const handleChange = (e) => {
