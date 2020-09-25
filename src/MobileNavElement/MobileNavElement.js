@@ -27,11 +27,7 @@ const MobileNavElement = ({ name }) => {
           !!lists.list[chosenList].length
           && (
           <AnimateOnChange>
-            {
-              isExpanded
-                ? <div className="arrow arrowReverse" />
-                : <div className="arrow" />
-            }
+            <div className={`arrow ${isExpanded ? 'arrowReverse' : ''}`} />
           </AnimateOnChange>
           )
         }
