@@ -4,12 +4,12 @@ import { AnimateOnChange } from 'react-animation';
 import ExpandedList from './ExpandedList/ExpandedList';
 import lists from '../../../ExpandedListItems.json';
 
-const NavElement = (props) => {
+const NavElement = ({ name }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   let chosenList;
   Object.keys(lists.list).forEach((key) => {
-    if (key === props.name) {
+    if (key === name) {
       chosenList = key;
     }
   });
@@ -27,7 +27,7 @@ const NavElement = (props) => {
       <div className="navElementContainer" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         <li className={!lists.list[chosenList].length && 'hoverableExpandedItem'}>
           <div>
-            <span className="navElementName">{props.name}</span>
+            <span className="navElementName">{ name }</span>
             {
             !!lists.list[chosenList].length && <div className="arrow" />
           }

@@ -2,8 +2,8 @@ import React from 'react';
 import '../../../../Styles/EpxandedList.scss';
 import ExpandedItem from './ExpandedItem/ExpandedItem';
 
-const ExpandedList = (props) => {
-  const expandedMenu = props.list.map((item) => <ExpandedItem name={item} />);
+const ExpandedList = ({ list }) => {
+  const expandedMenu = list.map((item) => <ExpandedItem name={item} />);
   return (
     <div className="expandedMenu">
       <ul>

@@ -5,12 +5,12 @@ import Collapse from '@material-ui/core/Collapse';
 import lists from '../../../ExpandedListItems.json';
 import MobileExpandedList from './MobileExpandedList/MobileExpandedList';
 
-const MobileNavElement = (props) => {
+const MobileNavElement = ({ name }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   let chosenList;
   Object.keys(lists.list).forEach((key) => {
-    if (key === props.name) {
+    if (key === name) {
       chosenList = key;
     }
   });
@@ -22,7 +22,7 @@ const MobileNavElement = (props) => {
   return (
     <>
       <div onClick={handleMouseClick} role="presentation" className="mobileNavElement">
-        {props.name}
+        {name}
         {
           !!lists.list[chosenList].length
           && (
