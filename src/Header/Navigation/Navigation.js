@@ -15,7 +15,7 @@ const Navigation = ({ setState, state }) => {
     <div className="navigation">
       <div className="container">
         <div>
-          <img alt="Spring" src={logo} />
+          <img className="navLogo" alt="Spring" src={logo} />
         </div>
         <ul>
           {names.map((name) => <NavElement name={name} />)}
