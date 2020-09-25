@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <div className="header">
       <MobileNavigation show={showMobileNav} />
-      <Navigation state={showMobileNav} setState={setShowMobileNav} />
+      <Navigation showMobileNav={showMobileNav} setShowMobileNav={setShowMobileNav} />
     </div>
   );
 };

@@ -4,11 +4,11 @@ import { Close, Menu } from '@material-ui/icons';
 import logo from '../Header/OG-Spring.svg.png';
 import NavElement from '../NavElement/NavElement';
 
-const Navigation = ({ setState, state }) => {
+const Navigation = ({ showMobileNav, setShowMobileNav }) => {
   const names = ['Why Spring', 'Learn', 'Projects', 'Training', 'Support', 'Community'];
 
   const handleClick = () => {
-    setState(!state);
+    setShowMobileNav(!showMobileNav);
   };
 
   return (
@@ -27,7 +27,7 @@ const Navigation = ({ setState, state }) => {
             animationOut="fadeOut"
           >
             {
-              state
+              showMobileNav
                 ? (
                   <Close
                     fontSize="large"
