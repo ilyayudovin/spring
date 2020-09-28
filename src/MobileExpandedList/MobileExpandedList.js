@@ -3,7 +3,7 @@ import ExpandedItem from '../ExpandedItem/ExpandedItem';
 import './MobileExpandedList.scss';
 
 const MobileExpandedList = ({ list }) => {
-  const expandedMenu = list.map((item) => <ExpandedItem name={item} />);
+  const expandedMenu = list.map((item, index) => <ExpandedItem key={index} name={item} />);
   return (
     <div className="mobileExpandedMenu">
       <ul>

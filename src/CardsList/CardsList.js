@@ -14,7 +14,7 @@ const CardsList = () => {
           ? (
             <div className="cardList">
               {
-                cards.map((item) => <Card name={item.name} text={item.text} icon={item.icon} />)
+                cards.map((item, index) => <Card key={index} name={item.name} text={item.text} icon={item.icon} />)
               }
             </div>
           )
