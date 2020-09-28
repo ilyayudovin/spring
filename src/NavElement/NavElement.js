@@ -1,23 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../Header/Header.scss';
-import { AnimateOnChange } from 'react-animation';
 import ExpandedList from '../ExpandedList/ExpandedList';
 import lists from '../ExpandedListItems.json';
 
 const NavElement = ({ name }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsExpanded(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsExpanded(false);
-  };
 
   return (
     <>
-      <div className="navElementContainer" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <div className="navElementContainer" >
         <li className={!lists.list[name].length && 'hoverableExpandedItem'}>
           <div>
             <span className="navElementName">{ name }</span>
@@ -26,11 +16,9 @@ const NavElement = ({ name }) => {
           }
           </div>
         </li>
-        <AnimateOnChange>
-          {
-            isExpanded && !!lists.list[name].length && <ExpandedList list={lists.list[name]} />
-          }
-        </AnimateOnChange>
+        {
+          !!lists.list[name].length && <ExpandedList list={lists.list[name]} />
+        }
       </div>
     </>
   );

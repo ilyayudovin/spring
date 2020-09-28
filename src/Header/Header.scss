@@ -11,7 +11,7 @@ ul {
 }
 .header {
   .navigation {
-    padding: 8px 0;
+    padding: 8px 50px 8px 0;
     position: relative;
     border-bottom: 1px solid #ebf2f2;
   }
@@ -31,6 +31,7 @@ ul {
   list-style-type: none;
   width: 705px;
   padding: 0;
+  margin: 17px 0;
 }
 .navLogo {
   height: 48px;
@@ -45,8 +46,11 @@ ul {
 }
 .navElementContainer {
   position: relative;
-  padding-top: 15px;
   cursor: pointer;
+  &:hover .expandedMenu {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 .navElementName {
   transition-duration: 0.3s;
@@ -69,11 +73,6 @@ ul {
   display: none;
   z-index: 100;
   cursor: pointer;
-}
-@media screen and (max-width: 1200px)  {
-  .navigation {
-    padding-right: 77px ;
-  }
 }
 @media screen and (max-width: 900px)  {
   .burgerIcon {
