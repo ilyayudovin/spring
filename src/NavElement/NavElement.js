@@ -13,7 +13,7 @@ const NavElement = ({ name }) => {
       <div className="navElementContainer" >
         <li className={!listLength && 'hoverableExpandedItem'}>
           <div>
-            <span className="navElementName">{ name }</span>
+            <span className="navElementName">{name}</span>
             {
               !!listLength && <div className="arrow" />
             }
