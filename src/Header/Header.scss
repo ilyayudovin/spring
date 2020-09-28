@@ -37,13 +37,6 @@ ul {
   height: 48px;
   max-width: 250px;
 }
-.closeIcon {
-  color: white;
-  position: fixed;
-  z-index: 100;
-  top: 10px;
-  right: 20px;
-}
 .navElementContainer {
   position: relative;
   cursor: pointer;
@@ -69,13 +62,53 @@ ul {
   padding: 3px;
   margin-left: 5px;
 }
-.burgerIcon {
+.burgerIconContainer {
   display: none;
+  padding: 10px;
   z-index: 100;
   cursor: pointer;
 }
+.hide {
+  transform: scale(0);
+  transition-duration: 0.3s;
+}
+.bar1, .bar2, .bar3 {
+  width: 19px;
+  height: 3px;
+  background: #191e1e;
+  margin: 0 0 3px;
+  transition: background .2s;
+  :hover > & {
+    background-color: #6db33f;
+  }
+}
+.closeIcon {
+  color: white;
+  position: fixed;
+  z-index: 100;
+  top: 20px;
+  right: 30px;
+  opacity: 1;
+}
+.hideCloseIcon {
+  opacity: 0;
+  transition-duration: 0.3s;
+  z-index: -1;
+}
+.change .bar1 {
+  transform: rotate(-45deg) translate(0px, 6px);
+  background-color: white;
+  height: 4px;
+  width: 24px;
+}
+.change .bar3 {
+  transform: rotate(45deg) translate(1px, -5px);
+  background-color: white;
+  height: 4px;
+  width: 24px;
+}
 @media screen and (max-width: 900px)  {
-  .burgerIcon {
+  .burgerIconContainer {
     display: block;
   }
   .container {
@@ -83,8 +116,10 @@ ul {
       display: none;
     }
   }
-  .navigation {
-    padding-right: 0 ;
+  .header {
+    .navigation {
+      padding: 8px 0 8px 0;
+    }
   }
   .arrow {
     color: #98afae;

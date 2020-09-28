@@ -1,6 +1,4 @@
 import React, { useContext } from 'react';
-import { AnimateOnChange } from 'react-animation';
-import { Close, Menu } from '@material-ui/icons';
 import logo from '../Header/OG-Spring.svg.png';
 import lists from '../ExpandedListItems.json';
 import NavElement from '../NavElement/NavElement';
@@ -22,23 +20,16 @@ const Navigation = () => {
         <ul>
           {Object.keys(lists.list).map((name) => <NavElement name={name} />)}
         </ul>
-
-        <div className="burgerIcon" onClick={handleClick} role="presentation">
-          <AnimateOnChange
-            animationIn="fadeIn"
-            animationOut="fadeOut"
-          >
-            {
-              showMobileNav
-                ? (
-                  <Close
-                    fontSize="large"
-                    className="closeIcon"
-                  />
-                )
-                : <Menu fontSize="large" />
-            }
-          </AnimateOnChange>
+        <div className="burgerIconContainer" onClick={handleClick} role="presentation">
+          <div className={`burgerIcon ${showMobileNav ? 'hide' : ''}`}>
+            <div className="bar1" />
+            <div className="bar2" />
+            <div className="bar3" />
+          </div>
+          <div className={`closeIcon change ${!showMobileNav ? 'hideCloseIcon' : ''}`}>
+            <div className="bar1" />
+            <div className="bar3" />
+          </div>
         </div>
       </div>
     </div>
