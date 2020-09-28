@@ -6,6 +6,13 @@
 body {
   background-color: #ebf2f2;;
 }
-p {
-  line-height: 1.7em;
+@font-face {
+  font-family: Metropolis;
+  src: url('./../fonts/Metropolis-Bold.ttf');
+  font-weight: 500;
+}
+@font-face {
+  font-family: Metropolis-Text;
+  src: url('./../fonts/Metropolis-Regular.ttf');
+  font-weight: 400;
 }
