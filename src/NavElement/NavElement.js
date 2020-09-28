@@ -5,19 +5,22 @@ import lists from '../ExpandedListItems.json';
 
 const NavElement = ({ name }) => {
 
+  const list = lists.list[name];
+  const listLength = lists.list[name].length;
+
   return (
     <>
       <div className="navElementContainer" >
-        <li className={!lists.list[name].length && 'hoverableExpandedItem'}>
+        <li className={!listLength && 'hoverableExpandedItem'}>
           <div>
             <span className="navElementName">{ name }</span>
             {
-            !!lists.list[name].length && <div className="arrow" />
-          }
+              !!listLength && <div className="arrow" />
+            }
           </div>
         </li>
         {
-          !!lists.list[name].length && <ExpandedList list={lists.list[name]} />
+          !!listLength && <ExpandedList list={list} />
         }
       </div>
     </>
