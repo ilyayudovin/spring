@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import './SideNav.scss';
-import lists from '../ExpandedListItems.json';
+import lists from '../ExpandListItems.json';
 import MobileNavElement from '../MobileNavElement/MobileNavElement';
 import HeaderContext from '../Contexts/HeaderContext';
 

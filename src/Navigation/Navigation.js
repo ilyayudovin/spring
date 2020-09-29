@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import logo from '../Header/OG-Spring.svg.png';
-import lists from '../ExpandedListItems.json';
+import lists from '../ExpandListItems.json';
 import NavElement from '../NavElement/NavElement';
 import HeaderContext from '../Contexts/HeaderContext';
 

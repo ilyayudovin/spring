@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './MobileNavElement.scss';
-import lists from '../ExpandedListItems.json';
-import MobileExpandedList from '../MobileExpandedList/MobileExpandedList';
+import lists from '../ExpandListItems.json';
+import MobileExpandList from '../MobileExpandList/MobileExpandList';
 
 const MobileNavElement = ({ name }) => {
   const list = lists.list[name];
@@ -23,7 +23,7 @@ const MobileNavElement = ({ name }) => {
         }
       </div>
       {
-        !!listLength && <MobileExpandedList isExpanded={isExpanded} list={list} />
+        !!listLength && <MobileExpandList isExpanded={isExpanded} list={list} />
       }
     </>
   );

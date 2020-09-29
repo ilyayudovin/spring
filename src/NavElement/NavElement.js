@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../Header/Header.scss';
-import ExpandedList from '../ExpandedList/ExpandedList';
-import lists from '../ExpandedListItems.json';
+import ExpandList from '../ExpandList/ExpandList';
+import lists from '../ExpandListItems.json';
 
 const NavElement = ({ name }) => {
   const list = lists.list[name];
@@ -20,7 +20,7 @@ const NavElement = ({ name }) => {
           </div>
         </li>
         {
-          !!listLength && <ExpandedList list={list} />
+          !!listLength && <ExpandList list={list} />
         }
       </div>
     </>

@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './ExpandedItem.scss';
+import './ExpandItem.scss';
 
-const ExpandedItem = ({ name }) => (
+const ExpandItem = ({ name }) => (
   <li className="expandedItem hoverableExpandedItem">{name}</li>
 );
 
-ExpandedItem.propTypes = {
+ExpandItem.propTypes = {
   name: PropTypes.string.isRequired,
 };
 
-export default ExpandedItem;
+export default ExpandItem;
