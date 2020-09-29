@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Card from '../Card/Card';
 import './CardList.scss';
-import '../CardsList/Search.scss';
-import cardsInfo from "../CardsInfo";
+import './Search.scss';
+import cardsInfo from '../CardsInfo';
 
 const CardsList = () => {
   const [cards, setCards] = useState(cardsInfo);
@@ -15,7 +15,7 @@ const CardsList = () => {
   return (
     <>
       <div className="searchInput">
-        <input placeholder='Search' onChange={handleChange} />
+        <input placeholder="Search" onChange={handleChange} />
       </div>
       <div className="cardListContainer">
         {
@@ -23,7 +23,15 @@ const CardsList = () => {
             ? (
               <div className="cardList">
                 {
-                  cards.map((item, index) => <Card key={index} name={item.name} text={item.text} icon={item.icon} />)
+                  cards
+                    .map((item, index) => (
+                      <Card
+                        key={cards[index]}
+                        name={item.name}
+                        text={item.text}
+                        icon={item.icon}
+                      />
+                    ))
                 }
               </div>
             )

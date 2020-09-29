@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import './MobileNavElement.scss';
 import lists from '../ExpandedListItems.json';
 import MobileExpandedList from '../MobileExpandedList/MobileExpandedList';
@@ -26,6 +27,10 @@ const MobileNavElement = ({ name }) => {
       }
     </>
   );
+};
+
+MobileNavElement.propTypes = {
+  name: PropTypes.string.isRequired,
 };
 
 export default MobileNavElement;

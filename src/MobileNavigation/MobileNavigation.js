@@ -8,7 +8,8 @@ const MobileNavigation = () => {
   // eslint-disable-next-line
   const [showMobileNav, setShowMobileNav] = useContext(HeaderContext);
 
-  const navElements = Object.keys(lists.list).map((name, index) => <MobileNavElement key={index} name={name} />);
+  const navElements = Object.keys(lists.list)
+    .map((name, index) => <MobileNavElement key={lists.list[index]} name={name} />);
 
   const classes = showMobileNav ? 'sideNav showSideNav' : 'sideNav';
 

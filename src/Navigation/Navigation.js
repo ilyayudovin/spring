@@ -18,7 +18,7 @@ const Navigation = () => {
           <img className="navLogo" alt="Spring" src={logo} />
         </div>
         <ul>
-          {Object.keys(lists.list).map((name, index) => <NavElement key={index} name={name} />)}
+          {Object.keys(lists.list).map((name, index) => <NavElement key={lists.list[index]} name={name} />)}
         </ul>
         <div className="burgerIconContainer" onClick={handleClick} role="presentation">
           <div className={`burgerIcon ${showMobileNav ? 'hide' : ''}`}>
