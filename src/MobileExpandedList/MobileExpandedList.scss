@@ -1,5 +1,12 @@
 .mobileExpandedMenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-out;
   ul {
     margin: 16px 0;
   }
+}
+.collapse {
+  max-height: 500px;
+  transition: all 0.25s ease-in;
 }

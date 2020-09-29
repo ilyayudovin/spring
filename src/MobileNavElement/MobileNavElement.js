@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './MobileNavElement.scss';
-import Collapse from '@material-ui/core/Collapse';
 import lists from '../ExpandedListItems.json';
 import MobileExpandedList from '../MobileExpandedList/MobileExpandedList';
 
@@ -23,7 +22,7 @@ const MobileNavElement = ({ name }) => {
         }
       </div>
       {
-        !!listLength && <Collapse in={isExpanded}><MobileExpandedList list={list} /></Collapse>
+        !!listLength && <MobileExpandedList isExpanded={isExpanded} list={list} />
       }
     </>
   );
