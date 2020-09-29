@@ -2,15 +2,14 @@ import React, { useState } from 'react';
 import Card from '../Card/Card';
 import './CardList.scss';
 import '../CardsList/Search.scss';
-import CardList from "../CardsInfo";
+import cardsInfo from "../CardsInfo";
 
 const CardsList = () => {
-  const [cards, setCards] = useState(CardList.cards);
+  const [cards, setCards] = useState(cardsInfo);
 
   const handleChange = (e) => {
     const inputText = e.currentTarget.value;
-    setCards(CardList.cards.filter((card) => card.name.toLowerCase().includes(inputText.toLowerCase())));
-    console.log(cards);
+    setCards(cardsInfo.filter((card) => card.name.toLowerCase().includes(inputText.toLowerCase())));
   };
 
   return (
