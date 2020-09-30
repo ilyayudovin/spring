@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/App.scss';
-import Header from './Header/Header';
-import Introduction from './Introduction/Introduction';
-import CardsList from './CardsList/CardsList';
+import Header from './components/Header/Header';
+import Introduction from './components/Introduction/Introduction';
+import CardsList from './components/CardsList/CardsList';
 
 const App = () => {
 

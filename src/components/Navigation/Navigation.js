@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import logo from '../Header/OG-Spring.svg.png';
-import lists from '../ExpandListItems.json';
+import lists from '../../ExpandListItems.json';
 import './SideNav.scss';
-import NavElement from '../NavElement/NavElement';
-import MobileNavElement from "../MobileNavElement/MobileNavElement";
+import NavElement from '../../components/NavElement/NavElement';
+import MobileNavElement from "../../components/MobileNavElement/MobileNavElement";
 
 const Navigation = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
