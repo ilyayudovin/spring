@@ -1,17 +1,19 @@
-import React, { useContext } from 'react';
+import React, { useState } from 'react';
 import logo from '../Header/OG-Spring.svg.png';
 import lists from '../ExpandListItems.json';
+import './SideNav.scss';
 import NavElement from '../NavElement/NavElement';
-import HeaderContext from '../Contexts/HeaderContext';
+import MobileNavElement from "../MobileNavElement/MobileNavElement";
 
 const Navigation = () => {
-  const [showMobileNav, setShowMobileNav] = useContext(HeaderContext);
+  const [showMobileNav, setShowMobileNav] = useState(false);
 
   const handleClick = () => {
     setShowMobileNav(!showMobileNav);
   };
 
   return (
+    <>
     <div className="navigation">
       <div className="container">
         <div>
@@ -33,6 +35,13 @@ const Navigation = () => {
         </div>
       </div>
     </div>
+    <div className={`sideNav ${showMobileNav ? 'showSideNav' : ''}`}>
+      <div className="sideNavContainer">
+        {Object.keys(lists.list)
+          .map((name, index) => <MobileNavElement key={lists.list[index]} name={name} />)}
+      </div>
+    </div>
+    </>
   );
 };
 
