@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import '../Header/Header.scss';
-import ExpandList from '../../components/ExpandList/ExpandList';
+import ExpandList from '../ExpandList/ExpandList';
 import lists from '../../ExpandListItems.json';
 
 const NavElement = ({ name }) => {

@@ -1,0 +1,20 @@
+{
+  "list": [
+    {
+      "p": "Why spring",
+      "ul": [ "Microservices", "Reactive", "EventDriven", "Cloud", "Web Applications", "Serverless", "Batch" ]
+    },
+    {
+      "p": "Learn",
+      "ul": ["Quickstart", "Guides", "Blog"]
+    },
+    {
+      "p": "Community",
+      "ul": ["Events", "Team"]
+    },
+    {
+      "p": "Projects",
+      "ul": ["Training", "Support", "Thank you"]
+    }
+  ]
+}

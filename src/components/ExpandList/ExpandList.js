@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './EpxandList.scss';
-import ExpandItem from '../../components/ExpandItem/ExpandItem';
+import ExpandItem from '../ExpandItem/ExpandItem';
 
 const ExpandList = ({ list }) => {
   const expandedMenu = list.map((item, index) => <ExpandItem key={list[index]} name={item} />);
