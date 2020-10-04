@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../Header/OG-Spring.svg.png';
+import logo from '../Navigation/OG-Spring.svg.png';
 import youtubeIcon from '../../assets/youtube.png';
 import githubIcon from '../../assets/github.png';
 import twitterIcon from '../../assets/twitter.png';

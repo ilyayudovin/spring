@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import logo from '../Header/OG-Spring.svg.png';
+import logo from './OG-Spring.svg.png';
 import lists from '../../ExpandListItems.json';
 import './SideNav.scss';
+import './Header.scss';
 import NavElement from '../NavElement/NavElement';
 import MobileNavElement from '../MobileNavElement/MobileNavElement';
 
@@ -13,7 +14,7 @@ const Navigation = () => {
   };
 
   return (
-    <>
+    <div className="header">
       <div className="navigation">
         <div className="container">
           <div>
@@ -41,7 +42,7 @@ const Navigation = () => {
             .map((name, index) => <MobileNavElement key={name + index} name={name} />)}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
