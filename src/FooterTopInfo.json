@@ -1,19 +1,17 @@
-{
-  "list": [
-    {
-      "name": "Get ahead",
-      "text": "VMware offers training and certification to turbo-charge your progress.",
-      "link": "Learn more"
-    },
-    {
-      "name": "Get support",
-      "text": "Spring Runtime offers support and binaries for OpenJDK™, Spring, and Apache Tomcat® in one simple subscription.",
-      "link": "Learn more"
-    },
-    {
-      "name": "Upcoming events",
-      "text": "App modernization. Kubernetes. Microservices. The best Cloud-Native Java content brought directly to you.",
-      "link": "Learn more"
-    }
-  ]
-}
+[
+  {
+    "name": "Get ahead",
+    "text": "VMware offers training and certification to turbo-charge your progress.",
+    "link": "Learn more"
+  },
+  {
+    "name": "Get support",
+    "text": "Spring Runtime offers support and binaries for OpenJDK™, Spring, and Apache Tomcat® in one simple subscription.",
+    "link": "Learn more"
+  },
+  {
+    "name": "Upcoming events",
+    "text": "App modernization. Kubernetes. Microservices. The best Cloud-Native Java content brought directly to you.",
+    "link": "Learn more"
+  }
+]

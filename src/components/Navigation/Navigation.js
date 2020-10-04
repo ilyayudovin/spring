@@ -20,7 +20,7 @@ const Navigation = () => {
             <img className="navLogo" alt="Spring" src={logo} />
           </div>
           <ul>
-            {Object.keys(lists.list).map((name, index) => <NavElement key={lists.list[index]} name={name} />)}
+            {Object.keys(lists).map((name, index) => <NavElement key={name + index} name={name} />)}
           </ul>
           <div className="burgerIconContainer" onClick={handleClick} role="presentation">
             <div className={`burgerIcon ${showMobileNav ? 'hide' : ''}`}>
@@ -37,8 +37,8 @@ const Navigation = () => {
       </div>
       <div className={`sideNav ${showMobileNav ? 'showSideNav' : ''}`}>
         <div className="sideNavContainer">
-          {Object.keys(lists.list)
-            .map((name, index) => <MobileNavElement key={lists.list[index]} name={name} />)}
+          {Object.keys(lists)
+            .map((name, index) => <MobileNavElement key={name + index} name={name} />)}
         </div>
       </div>
     </>

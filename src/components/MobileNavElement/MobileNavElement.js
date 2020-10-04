@@ -5,8 +5,8 @@ import lists from '../../ExpandListItems.json';
 import MobileExpandList from '../MobileExpandList/MobileExpandList';
 
 const MobileNavElement = ({ name }) => {
-  const list = lists.list[name];
-  const listLength = lists.list[name].length;
+  const list = lists[name];
+  const listLength = lists[name].length;
 
   const [isExpanded, setIsExpanded] = useState(false);
 

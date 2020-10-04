@@ -5,13 +5,13 @@ import ExpandList from '../ExpandList/ExpandList';
 import lists from '../../ExpandListItems.json';
 
 const NavElement = ({ name }) => {
-  const list = lists.list[name];
-  const listLength = lists.list[name].length;
+  const list = lists[name];
+  const listLength = lists[name].length;
 
   return (
     <>
       <div className="navElementContainer">
-        <li className={!listLength && 'hoverableExpandedItem'}>
+        <li className={!listLength ? "hoverableExpandedItem" : ""}>
           <div>
             <span className="navElementName">{name}</span>
             {

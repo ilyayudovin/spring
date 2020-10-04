@@ -1,22 +1,40 @@
 {
-  "list":{
-    "Why Spring": [
-      "Overview", "Microservices", "Reactive", "Event driven", "Cloud", "Web Applications", "Serverless", "Batch"
-    ],
-    "Learn": [
-      "Overview", "Quickstart", "Guides", "Blog"
-    ],
-    "Projects": [
-      "Overview", "Spring Boot", "Spring Framework", "Spring Cloud", "Spring Cloud Data Flow", "Spring Data", "Spring Integration", "Spring Batch", "Spring Security", "View all projects"
-    ],
-    "Training": [
-
-    ],
-    "Support": [
-
-    ],
-    "Community": [
-      "Overview", "Events", "Team"
-    ]
-  }
+  "Why Spring": [
+    "Overview",
+    "Microservices",
+    "Reactive",
+    "Event driven",
+    "Cloud",
+    "Web Applications",
+    "Serverless",
+    "Batch"
+  ],
+  "Learn": [
+    "Overview",
+    "Quickstart",
+    "Guides",
+    "Blog"
+  ],
+  "Projects": [
+    "Overview",
+    "Spring Boot",
+    "Spring Framework",
+    "Spring Cloud",
+    "Spring Cloud Data Flow",
+    "Spring Data",
+    "Spring Integration",
+    "Spring Batch",
+    "Spring Security",
+    "View all projects"
+  ],
+  "Training": [
+  ],
+  "Support": [
+  ],
+  "Community": [
+    "Overview",
+    "Events",
+    "Team"
+  ]
 }
+

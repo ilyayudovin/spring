@@ -6,7 +6,7 @@ const FooterBottomTopLeftColumn = ({ p, ul }) => (
     <p><strong>{p}</strong></p>
     <ul>
       {
-          ul.map((item) => <li>{item}</li>)
+          ul.map((item, index) => <li key={item + index}>{item}</li>)
         }
     </ul>
   </div>
@@ -14,7 +14,7 @@ const FooterBottomTopLeftColumn = ({ p, ul }) => (
 
 FooterBottomTopLeftColumn.propTypes = {
   p: PropTypes.string.isRequired,
-  ul: PropTypes.arrayOf().isRequired,
+  ul: PropTypes.array.isRequired,
 };
 
 export default FooterBottomTopLeftColumn;

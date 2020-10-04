@@ -26,7 +26,7 @@ const CardsList = () => {
                   cards
                     .map((item, index) => (
                       <Card
-                        key={cards[index]}
+                        key={item.name + index}
                         name={item.name}
                         text={item.text}
                         icon={item.icon}
