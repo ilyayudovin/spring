@@ -1,8 +1,8 @@
 import React from 'react';
 import logo from '../Header/OG-Spring.svg.png';
-import youtube from '../../assets/youtube.png';
-import github from '../../assets/github.png';
-import twitter from '../../assets/twitter.png';
+import youtubeIcon from '../../assets/youtube.png';
+import githubIcon from '../../assets/github.png';
+import twitterIcon from '../../assets/twitter.png';
 
 const OfficialInfo = () => (
   <div className="officialInfo">
@@ -27,13 +27,13 @@ const OfficialInfo = () => (
       </div>
       <div className="iconLinks">
         <a href="/#">
-          <img alt="youtube" src={youtube} />
+          <img alt="youtube" src={youtubeIcon} />
         </a>
         <a href="/#">
-          <img alt="github" src={github} />
+          <img alt="github" src={githubIcon} />
         </a>
         <a href="/#">
-          <img alt="twitter" src={twitter} />
+          <img alt="twitter" src={twitterIcon} />
         </a>
       </div>
     </div>
