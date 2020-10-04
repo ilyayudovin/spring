@@ -1,12 +1,16 @@
 import React from 'react';
-import FooterTop from '../FooterTop/FooterTop';
+import LearnMore from '../LearnMore/LearnMore';
 import './Footer.scss';
-import FooterBottom from '../FooterBottom/FooterBottom';
+import AdditionalInfo from "../AdditionalInfo/AdditionalInfo";
+import OfficialInfo from "../OfficialInfo/OfficialInfo";
 
 const Footer = () => (
   <div className="footer">
-    <FooterTop />
-    <FooterBottom />
+    <LearnMore />
+    <div className="footerInfoContainer">
+      <AdditionalInfo />
+      <OfficialInfo />
+    </div>
   </div>
 );
 

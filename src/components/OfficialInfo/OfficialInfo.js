@@ -4,12 +4,12 @@ import youtube from '../../assets/youtube.png';
 import github from '../../assets/github.png';
 import twitter from '../../assets/twitter.png';
 
-const FooterBottomBottom = () => (
-  <div className="footerBottomBottom">
-    <div className="footerBottomBottomContainer">
-      <div className="footerBottomBottomContent">
+const OfficialInfo = () => (
+  <div className="officialInfo">
+    <div className="officialInfoContainer">
+      <div className="officialInfoContent">
         <img alt="logo" src={logo} />
-        <p className="footerBottomBottomLinks">
+        <p className="officialInfoLinks">
           © 2020 VMware, Inc. or its affiliates. Terms of Use • Privacy • Trademark Guidelines
         </p>
         <p>
@@ -40,4 +40,4 @@ const FooterBottomBottom = () => (
   </div>
 );
 
-export default FooterBottomBottom;
+export default OfficialInfo;

@@ -1,11 +1,11 @@
 .footer {
   border-top: 2px solid #d9e9e9;
 }
-.footerTop {
+.LearnMore {
   padding: 80px 0;
   overflow: hidden;
 }
-.footerTopContainer {
+.LearnMoreContainer {
   max-width: 1140px;
   padding: 0 20px;
   margin: 0 auto;
@@ -61,40 +61,40 @@
       color: #333;
     }
   }
-  .footerTop {
+  .LearnMore {
     padding: 40px 0;
   }
 }
 
-.footerBottomContainer {
+.footerInfoContainer {
   background: #fff;
 }
-.footerBottomTop {
+.AdditionalInfo {
   padding: 50px 0 40px;
   max-width: 1320px;
   position: relative;
   z-index: 1;
   margin: 0 auto;
 }
-.footerBottomTopContainer {
+.AdditionalInfoContainer {
   max-width: 1140px;
   padding: 0 20px;
   margin: 0 auto;
 }
-.footerBottomTopContent {
+.AdditionalInfoContent {
   display: flex;
   justify-content: space-between;
 }
-.footerBottomTopLeft {
+.AdditionalInfoLists {
   margin-right: 20px;
   flex-grow: .6;
 }
-.footerBottomTopLeftContainer {
+.AdditionalInfoListsContainer {
   display: flex;
   justify-content: space-between;
   list-style: none;
 }
-.footerColumn {
+.infoListsColumn {
   margin-right: 10px;
   transition-duration: .2s;
   p {
@@ -121,7 +121,7 @@
     }
   }
 }
-.footerBottomTopRight {
+.newsLetter {
   h2 {
     margin-bottom: 20px;
     font-size: 1.5rem;
@@ -132,18 +132,18 @@
     position: relative;
   }
 }
-.footerBottomBottom {
+.officialInfo {
   color: #999;
   padding: 35px 0 60px;
 }
-.footerBottomBottomContainer {
+.officialInfoContainer {
   max-width: 1140px;
   padding: 0 20px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
-.footerBottomBottomContent{
+.officialInfoContent{
   p {
     max-width: 925px;
     line-height: 1.5em;
@@ -171,22 +171,22 @@
   }
 }
 @media screen and (max-width: 500px) {
-  .footerBottomTopLeft {
+  .AdditionalInfoLists {
     display: none;
   }
 }
 @media screen and (max-width: 600px){
-  .footerBottomBottom {
+  .officialInfo {
     padding: 0;
   }
-  .footerBottomBottomContainer{
+  .officialInfoContainer{
     flex-direction: column-reverse;
     padding-bottom: 40px;
   }
   .iconLinks {
     margin: 0 0 40px;
   }
-  .footerTopContainer {
+  .LearnMoreContainer {
     display: block;
   }
   .third {
@@ -195,7 +195,7 @@
   }
 }
 @media screen and (max-width: 1100px){
-  .footerBottomBottomContent{
+  .officialInfoContent{
     img {
       height: 30px;
     }
@@ -280,17 +280,17 @@
   }
 }
 @media screen and (max-width: 800px){
-  .footerBottomTopRight {
+  .newsLetter {
     h2 {
       font-size: 1.25rem;
     }
   }
 }
 @media screen and (max-width: 900px){
-  .footerBottomTopContent {
+  .AdditionalInfoContent {
     display: block;
   }
-  .footerBottomTopLeft {
+  .AdditionalInfoLists {
     margin-right: 0;
     margin-bottom: 20px;
     max-width: 550px;

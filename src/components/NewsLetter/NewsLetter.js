@@ -1,7 +1,7 @@
 import React from 'react';
 
-const FooterBottomTopRight = () => (
-  <div className="footerBottomTopRight">
+const NewsLetter = () => (
+  <div className="newsLetter">
     <h2>Get the Spring newsletter</h2>
     <form>
       <div className="formGroup">
@@ -22,4 +22,4 @@ const FooterBottomTopRight = () => (
   </div>
 );
 
-export default FooterBottomTopRight;
+export default NewsLetter;
