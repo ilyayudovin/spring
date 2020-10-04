@@ -15,7 +15,7 @@ const MobileExpandList = ({ list, isExpanded }) => {
 };
 
 MobileExpandList.propTypes = {
-  list: PropTypes.array.isRequired,
+  list: PropTypes.arrayOf(PropTypes.string).isRequired,
   isExpanded: PropTypes.bool.isRequired,
 };
 

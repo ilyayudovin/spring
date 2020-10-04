@@ -6,7 +6,7 @@ const AdditionalInfoListsColumn = ({ p, ul }) => (
     <p><strong>{p}</strong></p>
     <ul>
       {
-        ul.map((item, index) => <li key={item + index}>{item}</li>)
+        ul.map((item) => <li key={item}>{item}</li>)
       }
     </ul>
   </div>
@@ -14,7 +14,7 @@ const AdditionalInfoListsColumn = ({ p, ul }) => (
 
 AdditionalInfoListsColumn.propTypes = {
   p: PropTypes.string.isRequired,
-  ul: PropTypes.array.isRequired,
+  ul: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default AdditionalInfoListsColumn;

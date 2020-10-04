@@ -5,7 +5,7 @@ import Introduction from './components/Introduction/Introduction';
 import CardsList from './components/CardsList/CardsList';
 import AnchorsSection from './components/AnchorsSection/AnchorsSection';
 import Footer from './components/Footer/Footer';
-import Navigation from "./components/Navigation/Navigation";
+import Navigation from './components/Navigation/Navigation';
 
 const App = () => (
   <>

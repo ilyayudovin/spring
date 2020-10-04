@@ -6,7 +6,13 @@ const AnchorsList = () => (
 
   <div className="footerAnchorsList">
     {
-      anchorsList.map((anchor, index) => <Anchor key={anchorsList[index].name} name={anchor.name} text={anchor.text} />)
+      anchorsList.map((anchor, index) => (
+        <Anchor
+          key={anchorsList[index].name}
+          name={anchor.name}
+          text={anchor.text}
+        />
+      ))
     }
   </div>
 );

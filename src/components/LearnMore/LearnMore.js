@@ -6,7 +6,14 @@ const LearnMore = () => (
   <div className="LearnMore">
     <div className="LearnMoreContainer">
       {
-        learnMoreInfo.map((section, index) => <LearnMoreThird key={learnMoreInfo[index].name} name={section.name} text={section.text} link={section.link} />)
+        learnMoreInfo.map((section) => (
+          <LearnMoreThird
+            key={section.name}
+            name={section.name}
+            text={section.text}
+            link={section.link}
+          />
+        ))
       }
     </div>
   </div>

@@ -15,7 +15,7 @@ const ExpandList = ({ list }) => {
 };
 
 ExpandList.propTypes = {
-  list: PropTypes.array.isRequired,
+  list: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default ExpandList;
