@@ -3,8 +3,8 @@ import learnMoreInfo from '../../LearnMoreInfo.json';
 import LearnMoreThird from '../LearnMoreThird/LearnMoreThird';
 
 const LearnMore = () => (
-  <div className="LearnMore">
-    <div className="LearnMoreContainer">
+  <div className="learnMore">
+    <div className="learnMoreContainer">
       {
         learnMoreInfo.map((section) => (
           <LearnMoreThird
