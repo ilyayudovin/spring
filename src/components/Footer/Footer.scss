@@ -70,27 +70,27 @@
 .footerInfoContainer {
   background: #fff;
 }
-.AdditionalInfo {
+.additionalInfo {
   padding: 50px 0 40px;
   max-width: 1320px;
   position: relative;
   z-index: 1;
   margin: 0 auto;
 }
-.AdditionalInfoContainer {
+.additionalInfoContainer {
   max-width: 1140px;
   padding: 0 20px;
   margin: 0 auto;
 }
-.AdditionalInfoContent {
+.additionalInfoContent {
   display: flex;
   justify-content: space-between;
 }
-.AdditionalInfoLists {
+.additionalInfoLists {
   margin-right: 20px;
   flex-grow: .6;
 }
-.AdditionalInfoListsContainer {
+.additionalInfoListsContainer {
   display: flex;
   justify-content: space-between;
   list-style: none;
@@ -174,7 +174,7 @@
   }
 }
 @media screen and (max-width: 500px) {
-  .AdditionalInfoLists {
+  .additionalInfoLists {
     display: none;
   }
   .newsletter {
@@ -295,10 +295,10 @@
   }
 }
 @media screen and (max-width: 900px){
-  .AdditionalInfoContent {
+  .additionalInfoContent {
     display: block;
   }
-  .AdditionalInfoLists {
+  .additionalInfoLists {
     margin-right: 0;
     margin-bottom: 20px;
     max-width: 550px;

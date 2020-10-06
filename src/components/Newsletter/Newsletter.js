@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Newsletter = () => (
-  <div className="newsLetter">
+  <div className="newsletter">
     <h2>Get the Spring newsletter</h2>
     <form>
       <div className="formGroup">

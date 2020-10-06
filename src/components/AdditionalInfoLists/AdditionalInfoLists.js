@@ -3,8 +3,8 @@ import columnInfo from '../../AdditionalInfo.json';
 import AdditionalInfoListsColumn from '../AdditionalInfoListsColumn/AdditionalInfoListsColumn';
 
 const AdditionalInfoLists = () => (
-  <div className="AdditionalInfoLists">
-    <div className="AdditionalInfoListsContainer">
+  <div className="additionalInfoLists">
+    <div className="additionalInfoListsContainer">
       {
         columnInfo.map((column, index) => (
           <AdditionalInfoListsColumn
