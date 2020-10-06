@@ -3,7 +3,6 @@ import anchorsList from '../../AnchorsList.json';
 import Anchor from '../Anchor/Anchor';
 
 const AnchorsList = () => (
-
   <div className="footerAnchorsList">
     {
       anchorsList.map((anchor, index) => (

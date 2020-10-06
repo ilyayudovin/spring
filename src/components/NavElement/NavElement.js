@@ -9,21 +9,18 @@ const NavElement = ({ name }) => {
   const listLength = lists[name].length;
 
   return (
-    <>
-      <div className="navElementContainer">
-        <li className={!listLength ? 'hoverableExpandedItem' : ''}>
-          <div>
-            <span className="navElementName">{name}</span>
-            {
-              !!listLength && <div className="arrow" />
-            }
-          </div>
-        </li>
-        {
-          !!listLength && <ExpandList list={list} />
-        }
-      </div>
-    </>
+    <div className="navElementContainer">
+      <li className={!listLength ? 'hoverableExpandedItem' : ''}>
+        <div>
+          <span className="navElementName">{name}</span>
+          {
+            !!listLength && <div className="arrow" />
+          }</div>
+      </li>
+      {
+        !!listLength && <ExpandList list={list} />
+      }
+    </div>
   );
 };
 

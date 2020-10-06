@@ -4,17 +4,15 @@ import AdditionalInfoListsColumn from '../AdditionalInfoListsColumn/AdditionalIn
 
 const AdditionalInfoLists = () => (
   <div className="additionalInfoLists">
-    <div className="additionalInfoListsContainer">
-      {
-        columnInfo.map((column, index) => (
-          <AdditionalInfoListsColumn
-            key={columnInfo[index].p}
-            p={column.p}
-            ul={column.ul}
-          />
-        ))
-      }
-    </div>
+    {
+      columnInfo.map((column, index) => (
+        <AdditionalInfoListsColumn
+          key={columnInfo[index].p}
+          p={column.p}
+          ul={column.ul}
+        />
+      ))
+    }
   </div>
 );
 

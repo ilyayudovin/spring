@@ -5,7 +5,6 @@ import githubIcon from '../../assets/github.png';
 import twitterIcon from '../../assets/twitter.png';
 
 const OfficialInfo = () => (
-  <div className="officialInfo">
     <div className="officialInfoContainer">
       <div className="officialInfoContent">
         <img alt="logo" src={logo} />
@@ -37,7 +36,6 @@ const OfficialInfo = () => (
         </a>
       </div>
     </div>
-  </div>
 );
 
 export default OfficialInfo;
