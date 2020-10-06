@@ -8,6 +8,7 @@
   opacity: 0;
   visibility: hidden;
   transition: .3s ease-in;
+  z-index: 100;
 }
 .expandedMenu {
   ul {
