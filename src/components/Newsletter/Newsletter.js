@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NewsLetter = () => (
+const Newsletter = () => (
   <div className="newsLetter">
     <h2>Get the Spring newsletter</h2>
     <form>
@@ -22,4 +22,4 @@ const NewsLetter = () => (
   </div>
 );
 
-export default NewsLetter;
+export default Newsletter;

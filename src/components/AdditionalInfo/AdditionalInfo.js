@@ -1,13 +1,13 @@
 import React from 'react';
 import AdditionalInfoLists from '../AdditionalInfoLists/AdditionalInfoLists';
-import NewsLetter from '../NewsLetter/NewsLetter';
+import Newsletter from '../Newsletter/Newsletter';
 
 const AdditionalInfo = () => (
   <div className="AdditionalInfo">
     <div className="AdditionalInfoContainer">
       <div className="AdditionalInfoContent">
         <AdditionalInfoLists />
-        <NewsLetter />
+        <Newsletter />
       </div>
     </div>
   </div>
