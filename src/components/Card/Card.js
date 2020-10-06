@@ -4,7 +4,6 @@ import './Card.scss';
 
 const Card = ({ name, icon, text }) => (
   <div className="card">
-    <div className="cardContent">
       <div className="imgContainer">
         <img alt="icon" className="icon" src={icon} />
       </div>
@@ -12,7 +11,6 @@ const Card = ({ name, icon, text }) => (
         <h3>{name}</h3>
         <p className="cardText">{text}</p>
       </div>
-    </div>
   </div>
 );
 
