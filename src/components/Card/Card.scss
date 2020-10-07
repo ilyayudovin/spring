@@ -1,0 +1,59 @@
+.card {
+  position: relative;
+  width: 40%;
+  padding: 40px 30px;
+  margin-bottom: 25px;
+  background-color: white;
+  transition-duration: 0.5s;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15) !important;
+  }
+}
+.imgContainer {
+  align-self: flex-start;
+  width: 18.5%;
+}
+.icon {
+  height: 60px;
+  object-fit: contain;
+  max-width: 100%;
+}
+.cardText {
+  margin: 16px 0;
+  line-height: 1.7;
+  color: #333
+}
+.cardTextContainer {
+  width: 76.5%;
+  h3 {
+    font-family: Metropolis, sans-serif;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .card {
+    font-size: 87.5%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .card {
+    width: 100%;
+  }
+  .cardTextContainer {
+    h3{
+      font-size: 1.25rem;
+    }
+  }
+  .icon {
+    height: auto;
+    width: 100%;
+    max-height: 60px;
+    max-width: 70px;
+  }
+}

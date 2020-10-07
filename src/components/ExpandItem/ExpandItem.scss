@@ -1,0 +1,16 @@
+.expandedItem {
+  list-style-type: none;
+  margin-bottom: 14px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.hoverableExpandedItem:hover {
+  color: #6db33f;
+}
+@media screen and (max-width: 900px){
+  .expandedItem {
+    color: #98afae;
+    font-size: 1.3rem;
+  }
+}

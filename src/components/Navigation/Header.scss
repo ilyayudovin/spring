@@ -1,0 +1,141 @@
+ul {
+  navelement {
+    font-weight: 700;
+    font-family: Open Sans,sans-serif;
+  }
+}
+.header {
+  position: relative;
+  width: 100%;
+  background-color: white;
+}
+.header {
+  .navigation {
+    padding: 8px 50px 8px 0;
+    position: relative;
+    border-bottom: 1px solid #ebf2f2;
+  }
+}
+.container {
+  padding: 0 20px;
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container > ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+  width: 705px;
+  padding: 0;
+  margin: 17px 0;
+}
+.navLogo {
+  height: 48px;
+  max-width: 250px;
+}
+.navElementContainer {
+  position: relative;
+  cursor: pointer;
+  &:hover .expandedMenu {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.navElementName {
+  transition-duration: 0.3s;
+  font-weight: 700;
+}
+@media screen and (max-width: 1100px)  {
+  .navLogo {
+    height: 30px;
+  }
+}
+.arrow {
+  -webkit-transform: rotate(45deg) translateY(-6px);
+  border: solid #191e1e;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-left: 5px;
+}
+.burgerIconContainer {
+  display: none;
+  padding: 10px;
+  z-index: 100;
+  cursor: pointer;
+}
+.hide {
+  transform: scale(0);
+  transition-duration: 0.3s;
+}
+.bar1, .bar2, .bar3 {
+  width: 19px;
+  height: 3px;
+  background: #191e1e;
+  margin: 0 0 3px;
+  transition: background .2s;
+  :hover > & {
+    background-color: #6db33f;
+  }
+}
+.closeIcon {
+  color: white;
+  position: fixed;
+  z-index: 100;
+  top: 20px;
+  right: 30px;
+  opacity: 1;
+}
+.hideCloseIcon {
+  opacity: 0;
+  transition-duration: 0.3s;
+  z-index: -1;
+}
+.change .bar1 {
+  transform: rotate(-45deg) translate(0px, 6px);
+  background-color: white;
+  height: 4px;
+  width: 24px;
+}
+.change .bar3 {
+  transform: rotate(45deg) translate(1px, -5px);
+  background-color: white;
+  height: 4px;
+  width: 24px;
+}
+@media screen and (max-width: 900px)  {
+  .burgerIconContainer {
+    display: block;
+  }
+  .container {
+    ul {
+      display: none;
+    }
+  }
+  .header {
+    position: fixed;
+    z-index: 100;
+    .navigation {
+      padding: 8px 0 8px 0;
+    }
+  }
+  .arrow {
+    color: #98afae;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    border: solid #98afae;
+    border-width: 0 2px 2px 0;
+    padding: 5px;
+    margin-left: 5px;
+    display: block;
+  }
+  .arrowReverse {
+    -webkit-transform: rotate(-135deg) translateY(-6px);
+    right: 0;
+  }
+}
