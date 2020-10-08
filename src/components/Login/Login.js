@@ -37,10 +37,10 @@ const Login = () => {
 
   return (
     <div className="loginContainer">
-      <div className="login-box">
+      <div className="loginBox">
         <h2>Login</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="user-box">
+          <div className="userBox">
             <input
               name='username'
               ref={register({ required: true })}
@@ -51,7 +51,7 @@ const Login = () => {
             {errors.username?.type === "required" && <p className="errorMessage">username field is required</p>}
             <label>Username</label>
           </div>
-          <div className="user-box">
+          <div className="userBox">
             <input
               name='password'
               ref={register({ required: true })}
@@ -71,11 +71,11 @@ const Login = () => {
             }
             <label>Password</label>
           </div>
-          <button type='submit'>
-            <span />
-            <span />
-            <span />
-            <span />
+          <button className="submitButton" type='submit'>
+            <span className="corner" />
+            <span className="corner" />
+            <span className="corner" />
+            <span className="corner" />
             Submit
           </button>
         </form>
