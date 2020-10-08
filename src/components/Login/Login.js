@@ -1,11 +1,19 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import {useHistory} from 'react-router-dom';
+import showPasswordIcon from './../../assets/icons8-eye-24.png';
+import hidePasswordIcon from './../../assets/icons8-hide-24.png';
 import './Login.scss';
 
 const Login = () => {
   const history = useHistory();
   const usernameRef = useRef('');
   const passwordRef = useRef('');
+
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handlePassword = () => {
+    setShowPassword(!showPassword);
+  };
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -26,7 +34,12 @@ const Login = () => {
             <label>Username</label>
           </div>
           <div className="user-box">
-            <input ref={passwordRef} type="password" name="" required="" />
+            <input ref={passwordRef} type={showPassword ? 'text' : 'password'} name="" required="" />
+            {
+              showPassword
+                ? <img onClick={handlePassword} className="passwordIcon" src={showPasswordIcon} />
+                : <img onClick={handlePassword} className="passwordIcon" src={hidePasswordIcon} />
+            }
             <label>Password</label>
           </div>
           <a onClick={handleClick}>
