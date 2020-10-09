@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/spring/static/css/main.78a7603e.chunk.css",
-    "main.js": "/spring/static/js/main.21b63d52.chunk.js",
-    "main.js.map": "/spring/static/js/main.21b63d52.chunk.js.map",
-    "runtime-main.js": "/spring/static/js/runtime-main.e7083fa7.js",
-    "runtime-main.js.map": "/spring/static/js/runtime-main.e7083fa7.js.map",
-    "static/js/2.2003f40b.chunk.js": "/spring/static/js/2.2003f40b.chunk.js",
-    "static/js/2.2003f40b.chunk.js.map": "/spring/static/js/2.2003f40b.chunk.js.map",
-    "index.html": "/spring/index.html",
-    "precache-manifest.ed008717ce8f96c4f1ad6db67fe5e3f7.js": "/spring/precache-manifest.ed008717ce8f96c4f1ad6db67fe5e3f7.js",
-    "service-worker.js": "/spring/service-worker.js",
-    "static/css/main.78a7603e.chunk.css.map": "/spring/static/css/main.78a7603e.chunk.css.map",
-    "static/js/2.2003f40b.chunk.js.LICENSE.txt": "/spring/static/js/2.2003f40b.chunk.js.LICENSE.txt",
-    "static/media/App.scss": "/spring/static/media/Metropolis-Regular.8e113ffb.ttf",
-    "static/media/OG-Spring.svg.png": "/spring/static/media/OG-Spring.svg.364db56c.png",
-    "static/media/github.png": "/spring/static/media/github.438c93c0.png",
-    "static/media/springrestdocs.png": "/spring/static/media/springrestdocs.d35864eb.png"
+    "main.css": "/%7BGithub-repo-name%7D/static/css/main.0d2aa904.chunk.css",
+    "main.js": "/%7BGithub-repo-name%7D/static/js/main.8a6f2596.chunk.js",
+    "main.js.map": "/%7BGithub-repo-name%7D/static/js/main.8a6f2596.chunk.js.map",
+    "runtime-main.js": "/%7BGithub-repo-name%7D/static/js/runtime-main.136718bf.js",
+    "runtime-main.js.map": "/%7BGithub-repo-name%7D/static/js/runtime-main.136718bf.js.map",
+    "static/js/2.2003f40b.chunk.js": "/%7BGithub-repo-name%7D/static/js/2.2003f40b.chunk.js",
+    "static/js/2.2003f40b.chunk.js.map": "/%7BGithub-repo-name%7D/static/js/2.2003f40b.chunk.js.map",
+    "index.html": "/%7BGithub-repo-name%7D/index.html",
+    "precache-manifest.49df7b07de9eaeedbc4956e454766380.js": "/%7BGithub-repo-name%7D/precache-manifest.49df7b07de9eaeedbc4956e454766380.js",
+    "service-worker.js": "/%7BGithub-repo-name%7D/service-worker.js",
+    "static/css/main.0d2aa904.chunk.css.map": "/%7BGithub-repo-name%7D/static/css/main.0d2aa904.chunk.css.map",
+    "static/js/2.2003f40b.chunk.js.LICENSE.txt": "/%7BGithub-repo-name%7D/static/js/2.2003f40b.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/%7BGithub-repo-name%7D/static/media/Metropolis-Regular.8e113ffb.ttf",
+    "static/media/OG-Spring.svg.png": "/%7BGithub-repo-name%7D/static/media/OG-Spring.svg.364db56c.png",
+    "static/media/github.png": "/%7BGithub-repo-name%7D/static/media/github.438c93c0.png",
+    "static/media/springrestdocs.png": "/%7BGithub-repo-name%7D/static/media/springrestdocs.d35864eb.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.e7083fa7.js",
+    "static/js/runtime-main.136718bf.js",
     "static/js/2.2003f40b.chunk.js",
-    "static/css/main.78a7603e.chunk.css",
-    "static/js/main.21b63d52.chunk.js"
+    "static/css/main.0d2aa904.chunk.css",
+    "static/js/main.8a6f2596.chunk.js"
   ]
 }
