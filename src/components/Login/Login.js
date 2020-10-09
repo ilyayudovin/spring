@@ -66,8 +66,8 @@ const Login = () => {
             {errors.password?.type === "required" && <p className="errorMessage">password field is required</p>}
             {
               showPassword
-                ? <img onClick={handlePassword} className="passwordIcon" src={showPasswordIcon} />
-                : <img onClick={handlePassword} className="passwordIcon" src={hidePasswordIcon} />
+                ? <img alt="" onClick={handlePassword} className="passwordIcon" src={showPasswordIcon} />
+                : <img alt="" onClick={handlePassword} className="passwordIcon" src={hidePasswordIcon} />
             }
             <label>Password</label>
           </div>
