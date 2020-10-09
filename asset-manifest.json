@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/spring/static/css/main.78a7603e.chunk.css",
-    "main.js": "/spring/static/js/main.1fd61b5a.chunk.js",
-    "main.js.map": "/spring/static/js/main.1fd61b5a.chunk.js.map",
+    "main.js": "/spring/static/js/main.0dfcacf2.chunk.js",
+    "main.js.map": "/spring/static/js/main.0dfcacf2.chunk.js.map",
     "runtime-main.js": "/spring/static/js/runtime-main.e7083fa7.js",
     "runtime-main.js.map": "/spring/static/js/runtime-main.e7083fa7.js.map",
     "static/js/2.198af2e0.chunk.js": "/spring/static/js/2.198af2e0.chunk.js",
     "static/js/2.198af2e0.chunk.js.map": "/spring/static/js/2.198af2e0.chunk.js.map",
     "index.html": "/spring/index.html",
-    "precache-manifest.0a7f225bc1f7c8db8b9bcd5f9257c3ae.js": "/spring/precache-manifest.0a7f225bc1f7c8db8b9bcd5f9257c3ae.js",
+    "precache-manifest.d4fd411801b86cf3f73e23c81333e3be.js": "/spring/precache-manifest.d4fd411801b86cf3f73e23c81333e3be.js",
     "service-worker.js": "/spring/service-worker.js",
     "static/css/main.78a7603e.chunk.css.map": "/spring/static/css/main.78a7603e.chunk.css.map",
     "static/js/2.198af2e0.chunk.js.LICENSE.txt": "/spring/static/js/2.198af2e0.chunk.js.LICENSE.txt",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.e7083fa7.js",
     "static/js/2.198af2e0.chunk.js",
     "static/css/main.78a7603e.chunk.css",
-    "static/js/main.1fd61b5a.chunk.js"
+    "static/js/main.0dfcacf2.chunk.js"
   ]
 }
