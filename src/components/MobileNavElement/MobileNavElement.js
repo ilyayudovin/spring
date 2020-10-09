@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './MobileNavElement.scss';
-import lists from '../../ExpandListItems.json';
+import lists from '../../jsonInfo/ExpandListItems.json';
 import MobileExpandList from '../MobileExpandList/MobileExpandList';
 
 const MobileNavElement = ({ name }) => {

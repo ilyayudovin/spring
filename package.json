@@ -2,13 +2,12 @@
   "name": "trainee",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://ilyayudovin.github.io/spring" ,
+  "homepage": "http://{Github-username}.github.io/{Github-repo-name}",
   "dependencies": {
     "-": "0.0.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "gh-pages": "^3.1.0",
     "prop-types": "latest",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -19,13 +18,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "npm run lint",
     "lint": "eslint . --ext js,jsx --max-warnings 0",
     "eject": "react-scripts eject",
-    "lint:fix": "eslint --fix --ext .js,.jsx .",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "lint:fix": "eslint --fix --ext .js,.jsx ."
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -43,12 +42,13 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^4.14.1",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.21.1",
-    "eslint-plugin-react-hooks": "^4.1.2"
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "gh-pages": "^3.1.0",
+    "node-sass": "^4.14.1"
   }
 }

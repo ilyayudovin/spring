@@ -1,5 +1,5 @@
 import React from 'react';
-import columnInfo from '../../AdditionalInfo.json';
+import columnInfo from '../../jsonInfo/AdditionalInfo.json';
 import AdditionalInfoListsColumn from '../AdditionalInfoListsColumn/AdditionalInfoListsColumn';
 
 const AdditionalInfoLists = () => (

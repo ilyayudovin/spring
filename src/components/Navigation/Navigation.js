@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logo from './OG-Spring.svg.png';
-import lists from '../../ExpandListItems.json';
+import lists from '../../jsonInfo/ExpandListItems.json';
 import './SideNav.scss';
 import './Header.scss';
 import NavElement from '../NavElement/NavElement';

@@ -1,5 +1,5 @@
 import React from 'react';
-import learnMoreInfo from '../../LearnMoreInfo.json';
+import learnMoreInfo from '../../jsonInfo/LearnMoreInfo.json';
 import LearnMoreThird from '../LearnMoreThird/LearnMoreThird';
 
 const LearnMore = () => (
