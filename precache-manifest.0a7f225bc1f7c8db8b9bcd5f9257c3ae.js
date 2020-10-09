@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c6479e2f3d3b8a9eec5520ca7e50d35f",
+    "revision": "0443a00a2aba9d5110190d685fa161cf",
     "url": "/spring/index.html"
   },
   {
