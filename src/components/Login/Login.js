@@ -28,6 +28,7 @@ const Login = () => {
       });
     }
     if (username === 'admin' && password === '1234') {
+      localStorage.setItem('isAuthorized', 'true');
       history.push('/home');
     }
   };

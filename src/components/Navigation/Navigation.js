@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import logo from './OG-Spring.svg.png';
 import lists from '../../jsonInfo/ExpandListItems.json';
 import './SideNav.scss';
@@ -8,9 +9,14 @@ import MobileNavElement from '../MobileNavElement/MobileNavElement';
 
 const Navigation = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
-
+  const history = useHistory();
   const handleClick = () => {
     setShowMobileNav(!showMobileNav);
+  };
+
+  const logOut = () => {
+    localStorage.setItem('isAuthorized', 'false');
+    history.push('/login');
   };
 
   return (
@@ -22,7 +28,7 @@ const Navigation = () => {
           </div>
           <ul>
             {Object.keys(lists).map((name) => <NavElement key={name} name={name} />)}
-            <div className="logOut">Log Out</div>
+            <div className="logOut" onClick={logOut}>Log Out</div>
           </ul>
           <div className="burgerIconContainer" onClick={handleClick} role="presentation">
             <div className={`burgerIcon ${showMobileNav ? 'hide' : ''}`}>
@@ -39,7 +45,7 @@ const Navigation = () => {
       </div>
       <div className={`sideNav ${showMobileNav ? 'showSideNav' : ''}`}>
         <div className="sideNavContainer">
-          <div className="logOutMobile">Log Out</div>
+          <div className="logOutMobile" onClick={logOut}>Log Out</div>
           {Object.keys(lists)
             .map((name) => <MobileNavElement key={name} name={name} />)}
         </div>
