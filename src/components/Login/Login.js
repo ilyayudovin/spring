@@ -45,7 +45,7 @@ const Login = () => {
               name='username'
               ref={register({ required: true })}
               type="text"
-              className={errors.username && "wrongInput" }
+              className={errors.username && "wrongInput"}
             />
             {errors.username?.type === "wrong" && <p className="errorMessage">username field is incorrect</p>}
             {errors.username?.type === "required" && <p className="errorMessage">username field is required</p>}
