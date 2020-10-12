@@ -22,6 +22,7 @@ const Navigation = () => {
           </div>
           <ul>
             {Object.keys(lists).map((name) => <NavElement key={name} name={name} />)}
+            <div className="logOut">Log Out</div>
           </ul>
           <div className="burgerIconContainer" onClick={handleClick} role="presentation">
             <div className={`burgerIcon ${showMobileNav ? 'hide' : ''}`}>
@@ -38,6 +39,7 @@ const Navigation = () => {
       </div>
       <div className={`sideNav ${showMobileNav ? 'showSideNav' : ''}`}>
         <div className="sideNavContainer">
+          <div className="logOutMobile">Log Out</div>
           {Object.keys(lists)
             .map((name) => <MobileNavElement key={name} name={name} />)}
         </div>
