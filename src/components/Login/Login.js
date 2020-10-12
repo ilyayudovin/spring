@@ -8,7 +8,6 @@ import './Login.scss';
 const Login = () => {
   const { register, setError, errors, handleSubmit } = useForm();
   const history = useHistory();
-
   const [showPassword, setShowPassword] = useState(false);
 
   const passwordVisibility = () => {
@@ -18,16 +17,14 @@ const Login = () => {
   const onSubmit = (data) => {
     const username = data.username;
     const password = data.password;
-    if(username !== 'admin'){
+    if (username !== 'admin') {
       setError("username", {
-        type: "wrong",
-        message: "username field is incorrect"
+        type: "wrong"
       });
     }
-    if(password !== '1234'){
+    if (password !== '1234') {
       setError("password", {
-        type: "wrong",
-        message: "password field is incorrect"
+        type: "wrong"
       });
     }
     if (username === 'admin' && password === '1234') {
@@ -47,8 +44,8 @@ const Login = () => {
               type="text"
               className={errors.username && "wrongInput"}
             />
-            {errors.username?.type === "wrong" && <p className="errorMessage">username field is incorrect</p>}
-            {errors.username?.type === "required" && <p className="errorMessage">username field is required</p>}
+            {errors.username?.type === "wrong" && <p className="errorMessage">Username field is incorrect</p>}
+            {errors.username?.type === "required" && <p className="errorMessage">Username field is required</p>}
             <label>Username</label>
           </div>
           <div className="userBox">
@@ -62,8 +59,8 @@ const Login = () => {
               }
               className={errors.password && "wrongInput" }
             />
-            {errors.password?.type === "wrong" && <p className="errorMessage">password field is incorrect</p>}
-            {errors.password?.type === "required" && <p className="errorMessage">password field is required</p>}
+            {errors.password?.type === "wrong" && <p className="errorMessage">Password field is incorrect</p>}
+            {errors.password?.type === "required" && <p className="errorMessage">Password field is required</p>}
             {
               showPassword
                 ? <img alt="" onClick={passwordVisibility} className="passwordIcon" src={showPasswordIcon} />
