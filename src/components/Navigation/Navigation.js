@@ -15,7 +15,7 @@ const Navigation = () => {
   };
 
   const logOut = () => {
-    localStorage.setItem('isAuthorized', 'false');
+    localStorage.removeItem('isAuthorized');
     history.push('/login');
   };
 
