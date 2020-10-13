@@ -8,7 +8,6 @@ import Login from './components/Login/Login';
 const App = () => {
 
   const isLoggedIn = () => {
-    console.log('false');
     return localStorage.getItem('isAuthorized') === 'true';
   };
 
