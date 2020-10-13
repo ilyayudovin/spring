@@ -10,7 +10,7 @@ const Login = () => {
   const history = useHistory();
   const [showPassword, setShowPassword] = useState(false);
 
-  const ChangePasswordVisibility = () => {
+  const сhangePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
@@ -64,8 +64,8 @@ const Login = () => {
             {errors.password?.type === "required" && <p className="errorMessage">Password field is required</p>}
             {
               showPassword
-                ? <img alt="" onClick={ChangePasswordVisibility} className="passwordIcon" src={showPasswordIcon} />
-                : <img alt="" onClick={ChangePasswordVisibility} className="passwordIcon" src={hidePasswordIcon} />
+                ? <img alt="" onClick={сhangePasswordVisibility} className="passwordIcon" src={showPasswordIcon} />
+                : <img alt="" onClick={сhangePasswordVisibility} className="passwordIcon" src={hidePasswordIcon} />
             }
             <label>Password</label>
           </div>
