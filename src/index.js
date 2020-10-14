@@ -1,20 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/App.scss';
-import Introduction from './components/Introduction/Introduction';
-import CardsList from './components/CardsList/CardsList';
-import AnchorsSection from './components/AnchorsSection/AnchorsSection';
-import Footer from './components/Footer/Footer';
-import Navigation from './components/Navigation/Navigation';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './components/Home/Home';
+import Login from './components/Login/Login';
+import RequireAuth from './components/RequireAuth/RequireAuth';
 
 const App = () => (
-  <>
-    <Navigation />
-    <Introduction />
-    <CardsList />
-    <AnchorsSection />
-    <Footer />
-  </>
+  <BrowserRouter basename="/spring">
+    <Switch>
+      <Route exact path="/" component={Login} />
+      <Route exact path="/login" component={Login} />
+      <RequireAuth>
+        <Route exact path="/home" component={Home} />
+      </RequireAuth>
+    </Switch>
+  </BrowserRouter>
 );
 
 ReactDOM.render(<App />, document.getElementById('root'));

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../Navigation/Header.scss';
 import ExpandList from '../ExpandList/ExpandList';
-import lists from '../../ExpandListItems.json';
+import lists from '../../jsonInfo/ExpandListItems.json';
 
 const NavElement = ({ name }) => {
   const list = lists[name];

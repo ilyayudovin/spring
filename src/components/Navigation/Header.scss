@@ -31,7 +31,7 @@ ul {
   list-style-type: none;
   width: 705px;
   padding: 0;
-  margin: 17px 0;
+  margin: 2px 0;
 }
 .navLogo {
   height: 48px;
@@ -138,4 +138,26 @@ ul {
     -webkit-transform: rotate(-135deg) translateY(-6px);
     right: 0;
   }
+}
+.logOut {
+  background-color: lightgreen;
+  color: white;
+  line-height: 35px;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+  transition-duration: .3s;
+  &:hover {
+    background: white;
+    color: #6db33f;
+  }
+}
+.logOutMobile {
+  position: relative;
+  padding: 17px 0;
+  border-bottom: 1px solid #666;
+  color: #6db33f;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
 }

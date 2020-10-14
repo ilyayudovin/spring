@@ -1,5 +1,5 @@
 import React from 'react';
-import anchorsList from '../../AnchorsList.json';
+import anchorsList from '../../jsonInfo/AnchorsList.json';
 import Anchor from '../Anchor/Anchor';
 
 const AnchorsList = () => (

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Card from '../Card/Card';
 import './CardList.scss';
 import './Search.scss';
-import cardsInfo from '../../CardsInfo';
+import cardsInfo from '../../jsonInfo/CardsInfo';
 
 const CardsList = () => {
   const [cards, setCards] = useState(cardsInfo);
