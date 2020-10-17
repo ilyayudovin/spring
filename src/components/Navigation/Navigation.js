@@ -15,7 +15,7 @@ const Navigation = () => {
   };
 
   const logOut = () => {
-    localStorage.removeItem('isAuthorized');
+    localStorage.removeItem('token');
     history.push('/login');
   };
 

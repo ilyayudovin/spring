@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useForm } from "react-hook-form";
+import axios from 'axios';
 import showPasswordIcon from './../../assets/icons8-eye-24.png';
 import hidePasswordIcon from './../../assets/icons8-hide-24.png';
 import './Login.scss';
@@ -15,21 +16,28 @@ const Login = () => {
   };
 
   const onSubmit = (data) => {
-    const username = data.username;
-    const password = data.password;
-    if (username !== 'admin') {
+
+    const user = {
+      username: data.username,
+      password: data.password
+    };
+
+    if (user.username !== 'admin') {
       setError("username", {
         type: "wrong"
       });
     }
-    if (password !== '1234') {
+    if (user.password !== '1234') {
       setError("password", {
         type: "wrong"
       });
     }
-    if (username === 'admin' && password === '1234') {
-      localStorage.setItem('isAuthorized', 'true');
-      history.push('/home');
+    if (user.username === 'admin' && user.password === '1234') {
+      axios.post('http://localhost:3030/login', {user})
+        .then(res => {
+          localStorage.setItem('token',res.data);
+          history.push('/home');
+        });
     }
   };
 

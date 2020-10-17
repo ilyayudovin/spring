@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from '../Card/Card';
 import './CardList.scss';
 import './Search.scss';
+import axios from 'axios';
 import cardsInfo from '../../jsonInfo/CardsInfo';
 
 const CardsList = () => {
@@ -9,8 +10,18 @@ const CardsList = () => {
 
   const handleChange = (e) => {
     const inputText = e.currentTarget.value;
-    setCards(cardsInfo.filter((card) => card.name.toLowerCase().includes(inputText.toLowerCase())));
+    axios.get(`http://localhost:3030/projects/${inputText}`)
+      .then((res) => {
+        setCards(res.data);
+      });
   };
+
+  useEffect(() => {
+    axios.get('http://localhost:3030/projects')
+      .then((res) => {
+        setCards(res.data);
+      });
+  }, []);
 
   return (
     <>
