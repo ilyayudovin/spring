@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import Card from '../Card/Card';
 import './CardList.scss';
 import './Search.scss';
-import axios from 'axios';
 import cardsInfo from '../../jsonInfo/CardsInfo';
 
 const CardsList = () => {
