@@ -12,21 +12,23 @@ const CardsList = () => {
     const inputText = e.currentTarget.value;
     axios.get(`http://localhost:3030/projects/${inputText}`)
       .then((res) => {
-        setCards(res.data);
+        setCards(res.data.projectsInfo);
       });
   };
 
   useEffect(() => {
     axios.get('http://localhost:3030/projects')
       .then((res) => {
-        setCards(res.data);
+        setCards(res.data.projectsInfo);
       });
   }, []);
 
   return (
     <>
       <div className="searchInput">
+        <form>
         <input placeholder="Search" onChange={handleChange} />
+        </form>
       </div>
       <div className="cardListContainer">
         {

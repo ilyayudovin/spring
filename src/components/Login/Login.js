@@ -35,7 +35,7 @@ const Login = () => {
     if (user.username === 'admin' && user.password === '1234') {
       axios.post('http://localhost:3030/login', {user})
         .then(res => {
-          localStorage.setItem('token',res.data);
+          localStorage.setItem('token',res.data.token);
           history.push('/home');
         });
     }
