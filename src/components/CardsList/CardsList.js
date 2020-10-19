@@ -13,14 +13,20 @@ const CardsList = () => {
     axios.get(`http://localhost:3030/projects/${inputText}`)
       .then((res) => {
         setCards(res.data.projectsInfo);
-      });
+      })
+      .catch(error => {
+        console.log(error);
+      })
   };
 
   useEffect(() => {
     axios.get('http://localhost:3030/projects')
       .then((res) => {
         setCards(res.data.projectsInfo);
-      });
+      })
+      .catch(error => {
+        console.log(error);
+      })
   }, []);
 
   return (

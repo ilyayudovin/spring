@@ -37,7 +37,10 @@ const Login = () => {
         .then(res => {
           localStorage.setItem('token',res.data.token);
           history.push('/home');
-        });
+        })
+        .catch(error => {
+        console.log(error);
+        })
     }
   };
 
