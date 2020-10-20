@@ -32,9 +32,7 @@ const CardsList = () => {
   return (
     <>
       <div className="searchInput">
-        <form>
         <input placeholder="Search" onChange={handleChange} />
-        </form>
       </div>
       <div className="cardListContainer">
         {

@@ -16,12 +16,10 @@ const Login = () => {
   };
 
   const onSubmit = (data) => {
-
     const user = {
       username: data.username,
       password: data.password
     };
-
     if (user.username !== 'admin') {
       setError("username", {
         type: "wrong"
@@ -35,11 +33,11 @@ const Login = () => {
     if (user.username === 'admin' && user.password === '1234') {
       post('/login', {user})
         .then(res => {
-          localStorage.setItem('token',res.data.token);
+          localStorage.setItem('token', res.data.token);
           history.push('/home');
         })
         .catch(error => {
-        console.log(error);
+          console.log(error);
         })
     }
   };
