@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useForm } from "react-hook-form";
-import { post } from './../../api/instance';
+import instance from './../../api/instance';
 import showPasswordIcon from './../../assets/icons8-eye-24.png';
 import hidePasswordIcon from './../../assets/icons8-hide-24.png';
 import './Login.scss';
@@ -31,7 +31,7 @@ const Login = () => {
       });
     }
     if (user.username === 'admin' && user.password === '1234') {
-      post('/login', {user})
+      instance.post('/login', {user})
         .then(res => {
           localStorage.setItem('token', res.data.token);
           history.push('/home');

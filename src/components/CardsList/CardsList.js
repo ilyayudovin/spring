@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { get } from '../../api/instance';
+import instance from './../../api/instance';
 import Card from '../Card/Card';
 import './CardList.scss';
 import './Search.scss';
@@ -10,7 +10,7 @@ const CardsList = () => {
 
   const handleChange = (e) => {
     const inputText = e.currentTarget.value;
-    get(`/projects/${inputText}`)
+    instance.get(`/projects/${inputText}`)
       .then((res) => {
         setCards(res.data.projectsInfo);
       })
@@ -20,7 +20,7 @@ const CardsList = () => {
   };
 
   useEffect(() => {
-    get('/projects')
+    instance.get('/projects')
       .then((res) => {
         setCards(res.data.projectsInfo);
       })
