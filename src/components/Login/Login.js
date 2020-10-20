@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useForm } from "react-hook-form";
-import axios from 'axios';
+import { post } from './../../api/instance';
 import showPasswordIcon from './../../assets/icons8-eye-24.png';
 import hidePasswordIcon from './../../assets/icons8-hide-24.png';
 import './Login.scss';
@@ -33,7 +33,7 @@ const Login = () => {
       });
     }
     if (user.username === 'admin' && user.password === '1234') {
-      axios.post('http://localhost:3030/login', {user})
+      post('/login', {user})
         .then(res => {
           localStorage.setItem('token',res.data.token);
           history.push('/home');

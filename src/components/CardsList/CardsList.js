@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import { get } from '../../api/instance';
 import Card from '../Card/Card';
 import './CardList.scss';
 import './Search.scss';
@@ -10,7 +10,7 @@ const CardsList = () => {
 
   const handleChange = (e) => {
     const inputText = e.currentTarget.value;
-    axios.get(`http://localhost:3030/projects/${inputText}`)
+    get(`/projects/${inputText}`)
       .then((res) => {
         setCards(res.data.projectsInfo);
       })
@@ -20,7 +20,7 @@ const CardsList = () => {
   };
 
   useEffect(() => {
-    axios.get('http://localhost:3030/projects')
+    get('/projects')
       .then((res) => {
         setCards(res.data.projectsInfo);
       })
