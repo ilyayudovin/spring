@@ -1,38 +1,38 @@
 import React, { useEffect, useState } from 'react';
-import instance from './../../api/instance';
+import  debounce  from 'lodash.debounce';
+import instance from '../../api/instance';
 import Card from '../Card/Card';
 import './CardList.scss';
 import './Search.scss';
-import cardsInfo from '../../jsonInfo/CardsInfo';
 
 const CardsList = () => {
-  const [cards, setCards] = useState(cardsInfo);
+  const [cards, setCards] = useState([]);
 
-  const handleChange = (e) => {
-    const inputText = e.currentTarget.value;
-    instance.get(`/projects/${inputText}`)
-      .then((res) => {
-        setCards(res.data.projectsInfo);
-      })
-      .catch(error => {
-        console.log(error);
-      })
-  };
 
   useEffect(() => {
     instance.get('/projects')
       .then((res) => {
-        setCards(res.data.projectsInfo);
+        setCards(res.data);
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
-      })
+      });
   }, []);
+
+  const getSearchedInfo = debounce((text) => {
+    instance.get(`/projects/search?q=${text}`)
+      .then(res => setCards(res.data));
+  }, 500);
+
+  const handleSearch = (e) => {
+    const inputText = e.currentTarget.value;
+    getSearchedInfo(inputText);
+  };
 
   return (
     <>
       <div className="searchInput">
-        <input placeholder="Search" onChange={handleChange} />
+        <input placeholder="Search" onChange={handleSearch} />
       </div>
       <div className="cardListContainer">
         {
@@ -46,7 +46,7 @@ const CardsList = () => {
                         key={item.name}
                         name={item.name}
                         text={item.text}
-                        icon={item.icon}
+                        icon={item.url}
                       />
                     ))
                 }
