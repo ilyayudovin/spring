@@ -16,30 +16,26 @@ const Login = () => {
   };
 
   const onSubmit = (data) => {
-    const user = {
-      username: data.username,
-      password: data.password
-    };
-    if (user.username !== 'admin') {
-      setError("username", {
-        type: "wrong"
-      });
-    }
-    if (user.password !== '1234') {
-      setError("password", {
-        type: "wrong"
-      });
-    }
-    if (user.username === 'admin' && user.password === '1234') {
-      instance.post('/login', {user})
-        .then(res => {
+    instance.post('/login', { username: data.username, password: data.password })
+      .then(res => {
+        if (res.data.token) {
           localStorage.setItem('token', res.data.token);
           history.push('/home');
-        })
-        .catch(error => {
-          console.log(error);
-        })
-    }
+        }
+        else {
+          setError(res.data.type, {
+            type: "notFound",
+            message: res.data.error
+          });
+        }
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  };
+
+  const moveToSignUp = () => {
+    history.push('/signup');
   };
 
   return (
@@ -54,7 +50,7 @@ const Login = () => {
               type="text"
               className={errors.username && "wrongInput"}
             />
-            {errors.username?.type === "wrong" && <p className="errorMessage">Username field is incorrect</p>}
+            {errors.username?.type === "notFound" && <p className="errorMessage">{errors.username.message}</p>}
             {errors.username?.type === "required" && <p className="errorMessage">Username field is required</p>}
             <label>Username</label>
           </div>
@@ -69,7 +65,7 @@ const Login = () => {
               }
               className={errors.password && "wrongInput" }
             />
-            {errors.password?.type === "wrong" && <p className="errorMessage">Password field is incorrect</p>}
+            {errors.password?.type === "notFound" && <p className="errorMessage">{errors.password.message}</p>}
             {errors.password?.type === "required" && <p className="errorMessage">Password field is required</p>}
             {
               showPassword
@@ -86,6 +82,7 @@ const Login = () => {
             Submit
           </button>
         </form>
+        <div className="noAccount">Don't have an account? <a onClick={moveToSignUp}>Sign up</a></div>
       </div>
     </div>
   );
