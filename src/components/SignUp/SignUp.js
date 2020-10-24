@@ -25,7 +25,7 @@ const SignUp = () => {
       firstName: data.firstName,
       lastName: data.lastName,
       password: data.password,
-      repeatPassword: data.repeatPassword,
+      email: data.email,
       age: data.age
     };
     instance.post('/signup', user)
