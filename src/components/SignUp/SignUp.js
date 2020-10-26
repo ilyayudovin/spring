@@ -74,11 +74,7 @@ const SignUp = () => {
                     clearErrors('password');
                   }
                 }}
-                type={
-                  showPassword
-                    ? 'text'
-                    : 'password'
-                }
+                type={showPassword ? 'text' : 'password'}
               />
               {
                 showPassword
@@ -97,11 +93,7 @@ const SignUp = () => {
               <input
                 name='repeatPassword'
                 ref={register({ required: true, validate: value => value === password.current })}
-                type={
-                  showPassword
-                    ? 'text'
-                    : 'password'
-                }
+                type={showPassword ? 'text' : 'password'}
               />
               {
                 showPassword
