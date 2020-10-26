@@ -11,7 +11,7 @@ const Login = () => {
   const history = useHistory();
   const [showPassword, setShowPassword] = useState(false);
 
-  const сhangePasswordVisibility = () => {
+  const changePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
@@ -34,7 +34,7 @@ const Login = () => {
       })
   };
 
-  const moveToSignUp = () => {
+  const navigateToSignUp = () => {
     history.push('/signup');
   };
 
@@ -69,8 +69,8 @@ const Login = () => {
             {errors.password?.type === "required" && <p className="errorMessage">Password field is required</p>}
             {
               showPassword
-                ? <img alt="" onClick={сhangePasswordVisibility} className="passwordIcon" src={showPasswordIcon} />
-                : <img alt="" onClick={сhangePasswordVisibility} className="passwordIcon" src={hidePasswordIcon} />
+                ? <img alt="" onClick={changePasswordVisibility} className="passwordIcon" src={showPasswordIcon} />
+                : <img alt="" onClick={changePasswordVisibility} className="passwordIcon" src={hidePasswordIcon} />
             }
             <label>Password</label>
           </div>
@@ -82,7 +82,7 @@ const Login = () => {
             Submit
           </button>
         </form>
-        <div className="noAccount">Don't have an account? <a onClick={moveToSignUp}>Sign up</a></div>
+        <div className="noAccount">Don't have an account? <a onClick={navigateToSignUp}>Sign up</a></div>
       </div>
     </div>
   );
