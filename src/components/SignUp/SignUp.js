@@ -19,6 +19,10 @@ const SignUp = () => {
     setShowPassword(!showPassword);
   };
 
+  const isInvalidPassword = (password) => {
+    return (!(/\d/.test(password) && /[a-zA-Z]/g.test(password)));
+  };
+
   const onSubmit = (data) => {
     const user = {
       username: data.username,
@@ -65,7 +69,7 @@ const SignUp = () => {
                 name='password'
                 ref={register({ required: true, minLength: 4 })}
                 onChange={(e) => {
-                  if(!(/\d/.test(e.target.value) && /[a-zA-Z]/g.test(e.target.value))){
+                  if(isInvalidPassword(e.target.value)){
                     setError("password", {
                       type: "contain"
                     });
