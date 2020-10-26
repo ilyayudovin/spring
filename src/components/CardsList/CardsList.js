@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import  debounce  from 'lodash.debounce';
+import debounce from 'lodash.debounce';
 import instance from '../../api/instance';
 import Card from '../Card/Card';
 import './CardList.scss';
