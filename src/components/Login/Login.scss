@@ -78,7 +78,7 @@
   text-transform: uppercase;
   overflow: hidden;
   transition: .5s;
-  margin-top: 40px;
+  margin-top: 20px;
   letter-spacing: 4px;
   cursor: pointer;
   border: none;
@@ -195,5 +195,29 @@
   .loginForm {
     width: 100%;
     border-radius: 0;
+  }
+}
+
+.nameInputContainer, .inputPasswordContainer, .emailInputContainer {
+  display: flex;
+  .inputContainer:first-child {
+    margin-right: 15px;
+  }
+  .inputContainer {
+    max-width: calc(50% - 7.5px);
+    .errorMessage {
+      font-size: 12px;
+    }
+  }
+}
+
+.noAccount {
+  text-align: center;
+  margin-top: 15px;
+  color: white;
+  font-size: 15px;
+  a {
+    color: #6db33f;
+    cursor: pointer;
   }
 }

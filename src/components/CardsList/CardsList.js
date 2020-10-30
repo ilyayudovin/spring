@@ -1,21 +1,38 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import debounce from 'lodash.debounce';
+import instance from '../../api/instance';
 import Card from '../Card/Card';
 import './CardList.scss';
 import './Search.scss';
-import cardsInfo from '../../jsonInfo/CardsInfo';
 
 const CardsList = () => {
-  const [cards, setCards] = useState(cardsInfo);
+  const [cards, setCards] = useState([]);
 
-  const handleChange = (e) => {
+
+  useEffect(() => {
+    instance.get('/projects')
+      .then((res) => {
+        setCards(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  const getSearchedInfo = debounce((text) => {
+    instance.get(`/projects/search?q=${text}`)
+      .then(res => setCards(res.data));
+  }, 500);
+
+  const handleSearch = (e) => {
     const inputText = e.currentTarget.value;
-    setCards(cardsInfo.filter((card) => card.name.toLowerCase().includes(inputText.toLowerCase())));
+    getSearchedInfo(inputText);
   };
 
   return (
     <>
       <div className="searchInput">
-        <input placeholder="Search" onChange={handleChange} />
+        <input placeholder="Search" onChange={handleSearch} />
       </div>
       <div className="cardListContainer">
         {
@@ -29,7 +46,7 @@ const CardsList = () => {
                         key={item.name}
                         name={item.name}
                         text={item.text}
-                        icon={item.icon}
+                        icon={item.url}
                       />
                     ))
                 }
